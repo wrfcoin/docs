@@ -69,3 +69,7 @@ Testnet, not production. Architecture and implementation notes evolve with the W
 Documentation is licensed under CC BY 4.0; code samples in other WRFCoin repositories are MIT OR Apache-2.0.
 
 See [LICENSE](LICENSE).
+
+---
+
+_Note: issue and pull-request numbers mentioned in this repository refer to a private archive that predates this public repository; they are not links into this repo._
