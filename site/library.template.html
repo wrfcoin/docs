@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The WRFCoin Library</title>
+  <link rel="stylesheet" href="assets/library.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne:wght@400;500;600;700;800&family=DM+Sans:opsz,wght@9..40,300..700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="paper">
+
+    <header class="masthead">
+      <div class="dateline">
+        <span class="dateline-mark">⁂</span>
+        WRFCoin · year zero · the long testnet
+      </div>
+      <h1 class="title">
+        <span class="title-the">The</span>
+        <span class="title-main">WRFCoin Library</span>
+      </h1>
+      <p class="subtitle">protocol library · wiki bridge · repo state</p>
+      <p class="meta-line">an almanac of what exists, what has been written, and what is still open</p>
+      <div class="masthead-rule">
+        <span class="masthead-stamp">issue · {{ GENERATED_AT }}</span>
+      </div>
+    </header>
+
+    <section class="strip" aria-label="Live state">
+      <article class="strip-tile" data-state="{{ TESTNET_HEALTH_CLASS }}">
+        <div class="tile-kicker">§ I · testnet</div>
+        <div class="tile-status"><span class="status-dot status-{{ TESTNET_HEALTH_CLASS }}"></span>{{ TESTNET_STATUS_LINE }}</div>
+        <dl class="tile-readings">
+          <div class="reading"><dt>block</dt><dd>{{ TESTNET_BLOCK }}</dd></div>
+          <div class="reading"><dt>peers</dt><dd>{{ TESTNET_PEERS }}</dd></div>
+          <div class="reading"><dt>last</dt><dd>{{ TESTNET_LAST_BLOCK }}</dd></div>
+        </dl>
+      </article>
+
+      <article class="strip-tile">
+        <div class="tile-kicker">§ II · prs · velocity</div>
+        <div class="tile-status"><span class="status-dot status-active"></span>org-wide</div>
+        <dl class="tile-readings">
+          <div class="reading"><dt>open</dt><dd>{{ PR_OPEN_TOTAL }}</dd></div>
+          <div class="reading"><dt>ready</dt><dd>{{ PR_READY_TOTAL }}</dd></div>
+          <div class="reading"><dt>commits 7d</dt><dd>{{ COMMITS_7D_TOTAL }}</dd></div>
+        </dl>
+      </article>
+
+      <article class="strip-tile">
+        <div class="tile-kicker">§ III · wiki coverage</div>
+        <div class="tile-status"><span class="status-dot status-active"></span>{{ WIKI_ACTIVE }} active · {{ WIKI_STUB }} stub</div>
+        <dl class="tile-readings">
+          <div class="reading"><dt>open Q</dt><dd>{{ WIKI_OPEN_Q }}</dd></div>
+          <div class="reading"><dt>sources</dt><dd>{{ WIKI_SOURCES }}</dd></div>
+          <div class="reading"><dt>pages</dt><dd>{{ WIKI_TOTAL }}</dd></div>
+        </dl>
+      </article>
+
+      <article class="strip-tile">
+        <div class="tile-kicker">§ IV · last lint</div>
+        <div class="tile-status"><span class="status-dot status-stub"></span>wiki maintenance</div>
+        <dl class="tile-readings">
+          <div class="reading reading-wide"><dt>date</dt><dd>{{ LAST_LINT_DATE }}</dd></div>
+          <div class="reading reading-wide"><dt>next due</dt><dd>{{ NEXT_REVIEW_DUE }}</dd></div>
+        </dl>
+      </article>
+    </section>
+
+    <hr class="ornament" aria-hidden="true">
+
+    <section class="catalog catalog-chapters">
+      <header class="catalog-head">
+        <div class="catalog-kicker">§ V</div>
+        <h2 class="catalog-title">Whitepaper Chapters</h2>
+        <p class="catalog-blurb">The seven canonical sections of the WRFCoin design rationale. Each chapter is the source of truth for its subject; the wiki layers synthesis on top.</p>
+      </header>
+      <div class="grid grid-chapters">
+        {{ CHAPTER_CARDS_HTML }}
+      </div>
+    </section>
+
+    <hr class="ornament" aria-hidden="true">
+
+    <section class="catalog catalog-wiki">
+      <header class="catalog-head">
+        <div class="catalog-kicker">§ VI</div>
+        <h2 class="catalog-title">Wiki Pages</h2>
+        <p class="catalog-blurb">{{ WIKI_ACTIVE }} active · {{ WIKI_STUB }} stub · {{ WIKI_OPEN_Q }} open questions · {{ WIKI_SOURCES }} sources cited · grouped by directory.</p>
+      </header>
+      {{ WIKI_SECTION_HTML }}
+    </section>
+
+    <hr class="ornament" aria-hidden="true">
+
+    <section class="catalog catalog-repos">
+      <header class="catalog-head">
+        <div class="catalog-kicker">§ VII</div>
+        <h2 class="catalog-title">Repositories</h2>
+        <p class="catalog-blurb">{{ REPO_COUNT }} repos under github.com/wrfcoin · {{ PR_OPEN_TOTAL }} open PRs · {{ COMMITS_7D_TOTAL }} commits in the last seven days.</p>
+      </header>
+
+      <div class="repo-group">
+        <h3 class="repo-group-head"><span class="repo-group-numeral">i</span> Active</h3>
+        <div class="grid grid-repos">{{ REPO_ACTIVE_CARDS_HTML }}</div>
+      </div>
+
+      <div class="repo-group">
+        <h3 class="repo-group-head"><span class="repo-group-numeral">ii</span> Greenfield</h3>
+        <div class="grid grid-repos">{{ REPO_GREENFIELD_CARDS_HTML }}</div>
+      </div>
+
+      <div class="repo-group">
+        <h3 class="repo-group-head"><span class="repo-group-numeral">iii</span> Archived</h3>
+        <div class="grid grid-repos">{{ REPO_ARCHIVED_CARDS_HTML }}</div>
+      </div>
+    </section>
+
+    <hr class="ornament ornament-final" aria-hidden="true">
+
+    <footer class="colophon">
+      <p class="colophon-lede">A Colophon</p>
+      <p>Generated by <code>scripts/generate_library.py</code>.</p>
+      <p>Wiki manifest sourced from <code>wiki/data/wiki-manifest.json</code>.</p>
+      <p>Repo state cached at <code>cache/repo-state.json</code> · testnet state at <code>cache/testnet-state.json</code>.</p>
+      <p class="colophon-mark">{{ GENERATED_AT }} · ⁂</p>
+    </footer>
+
+  </div>
+</body>
+</html>

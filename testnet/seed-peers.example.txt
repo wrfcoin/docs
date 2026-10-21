@@ -1,0 +1,7 @@
+# WRFCoin testnet seed peer list.
+#
+# Add one libp2p multiaddress per line when a team-operated seed peer is
+# intentionally published for operators.
+#
+# Example format:
+# /ip4/203.0.113.10/tcp/9001/p2p/12D3KooWExamplePeerId

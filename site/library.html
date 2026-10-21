@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The WRFCoin Library</title>
+  <link rel="stylesheet" href="assets/library.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne:wght@400;500;600;700;800&family=DM+Sans:opsz,wght@9..40,300..700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="paper">
+
+    <header class="masthead">
+      <div class="dateline">
+        <span class="dateline-mark">⁂</span>
+        WRFCoin · year zero · the long testnet
+      </div>
+      <h1 class="title">
+        <span class="title-the">The</span>
+        <span class="title-main">WRFCoin Library</span>
+      </h1>
+      <p class="subtitle">protocol library · wiki bridge · repo state</p>
+      <p class="meta-line">an almanac of what exists, what has been written, and what is still open</p>
+      <div class="masthead-rule">
+        <span class="masthead-stamp">issue · 2026-10-18 23:47 UTC</span>
+      </div>
+    </header>
+
+    <section class="strip" aria-label="Live state">
+      <article class="strip-tile" data-state="unreachable">
+        <div class="tile-kicker">§ I · testnet</div>
+        <div class="tile-status"><span class="status-dot status-unreachable"></span>node unreachable · last seen never</div>
+        <dl class="tile-readings">
+          <div class="reading"><dt>block</dt><dd>—</dd></div>
+          <div class="reading"><dt>peers</dt><dd>—</dd></div>
+          <div class="reading"><dt>last</dt><dd>—</dd></div>
+        </dl>
+      </article>
+
+      <article class="strip-tile">
+        <div class="tile-kicker">§ II · prs · velocity</div>
+        <div class="tile-status"><span class="status-dot status-active"></span>org-wide</div>
+        <dl class="tile-readings">
+          <div class="reading"><dt>open</dt><dd>0</dd></div>
+          <div class="reading"><dt>ready</dt><dd>0</dd></div>
+          <div class="reading"><dt>commits 7d</dt><dd>0</dd></div>
+        </dl>
+      </article>
+
+      <article class="strip-tile">
+        <div class="tile-kicker">§ III · wiki coverage</div>
+        <div class="tile-status"><span class="status-dot status-active"></span>10 active · 0 stub</div>
+        <dl class="tile-readings">
+          <div class="reading"><dt>open Q</dt><dd>23</dd></div>
+          <div class="reading"><dt>sources</dt><dd>15</dd></div>
+          <div class="reading"><dt>pages</dt><dd>10</dd></div>
+        </dl>
+      </article>
+
+      <article class="strip-tile">
+        <div class="tile-kicker">§ IV · last lint</div>
+        <div class="tile-status"><span class="status-dot status-stub"></span>wiki maintenance</div>
+        <dl class="tile-readings">
+          <div class="reading reading-wide"><dt>date</dt><dd>2026-09-20</dd></div>
+          <div class="reading reading-wide"><dt>next due</dt><dd>—</dd></div>
+        </dl>
+      </article>
+    </section>
+
+    <hr class="ornament" aria-hidden="true">
+
+    <section class="catalog catalog-chapters">
+      <header class="catalog-head">
+        <div class="catalog-kicker">§ V</div>
+        <h2 class="catalog-title">Whitepaper Chapters</h2>
+        <p class="catalog-blurb">The seven canonical sections of the WRFCoin design rationale. Each chapter is the source of truth for its subject; the wiki layers synthesis on top.</p>
+      </header>
+      <div class="grid grid-chapters">
+        <article class="card card-chapter"><div class="card-marginalia">Ch. 1</div><h3 class="card-title"><a href="../whitepaper/01-vision.md">Vision</a></h3><p class="card-blurb">Problem, opportunity, public-good framing.</p><footer class="card-foot"><span class="metric">684 words · 5 open</span><span class="metric metric-wiki" data-present="true">wiki ✓</span></footer></article>
+<article class="card card-chapter"><div class="card-marginalia">Ch. 2</div><h3 class="card-title"><a href="../whitepaper/02-origin-story.md">Origin story</a></h3><p class="card-blurb">How we got here: Dec 2022 → Feb 2025.</p><footer class="card-foot"><span class="metric">857 words · 5 open</span><span class="metric metric-wiki" data-present="true">wiki ✓</span></footer></article>
+<article class="card card-chapter"><div class="card-marginalia">Ch. 3</div><h3 class="card-title"><a href="../whitepaper/03-architecture.md">Architecture</a></h3><p class="card-blurb">Three-layer stack: L1 + rollups + data sidechains.</p><footer class="card-foot"><span class="metric">512 words · 2 open</span><span class="metric metric-wiki" data-present="true">wiki ✓</span></footer></article>
+<article class="card card-chapter"><div class="card-marginalia">Ch. 4</div><h3 class="card-title"><a href="../whitepaper/04-consensus.md">Consensus</a></h3><p class="card-blurb">Proof of Publication (PoPub).</p><footer class="card-foot"><span class="metric">632 words · 3 open</span><span class="metric metric-wiki" data-present="true">wiki ✓</span></footer></article>
+<article class="card card-chapter"><div class="card-marginalia">Ch. 5</div><h3 class="card-title"><a href="../whitepaper/05-tokenomics.md">Tokenomics</a></h3><p class="card-blurb">WRF token · WRC-20 ecosystem standard.</p><footer class="card-foot"><span class="metric">946 words · 2 open</span><span class="metric metric-wiki" data-present="true">wiki ✓</span></footer></article>
+<article class="card card-chapter"><div class="card-marginalia">Ch. 6</div><h3 class="card-title"><a href="../whitepaper/06-tech-stack.md">Tech stack</a></h3><p class="card-blurb">Rust workspace · ed25519 (SLIP-0010) · BIP-39 · 0x SHA3-256 addresses.</p><footer class="card-foot"><span class="metric">487 words · 2 open</span><span class="metric metric-wiki" data-present="true">wiki ✓</span></footer></article>
+<article class="card card-chapter"><div class="card-marginalia">Ch. 7</div><h3 class="card-title"><a href="../whitepaper/07-roadmap.md">Roadmap</a></h3><p class="card-blurb">Four phases · testnet target mid-2026.</p><footer class="card-foot"><span class="metric">681 words · 2 open</span><span class="metric metric-wiki" data-present="true">wiki ✓</span></footer></article>
+      </div>
+    </section>
+
+    <hr class="ornament" aria-hidden="true">
+
+    <section class="catalog catalog-wiki">
+      <header class="catalog-head">
+        <div class="catalog-kicker">§ VI</div>
+        <h2 class="catalog-title">Wiki Pages</h2>
+        <p class="catalog-blurb">10 active · 0 stub · 23 open questions · 15 sources cited · grouped by directory.</p>
+      </header>
+      <section class="wiki-group"><h3 class="wiki-group-head"><span class="wiki-group-name"><span class="wiki-group-numeral">i</span><span>framing</span></span><span class="wiki-group-tally">2 pages</span></h3><div class="grid grid-wiki"><article class="card card-wiki" data-status="active"><header class="card-head"><h3 class="card-title"><a href="wiki.html#origin-story">Origin Story</a></h3><span class="status-dot status-active" title="active"></span></header><dl class="card-stats"><div><dt>open Q</dt><dd>5</dd></div><div><dt>src</dt><dd>1</dd></div></dl><footer class="card-foot"><span>2026-05-18</span></footer></article>
+<article class="card card-wiki" data-status="active"><header class="card-head"><h3 class="card-title"><a href="wiki.html#vision">Vision</a></h3><span class="status-dot status-active" title="active"></span></header><dl class="card-stats"><div><dt>open Q</dt><dd>5</dd></div><div><dt>src</dt><dd>1</dd></div></dl><footer class="card-foot"><span>2026-05-18</span></footer></article></div></section>
+<section class="wiki-group"><h3 class="wiki-group-head"><span class="wiki-group-name"><span class="wiki-group-numeral">ii</span><span>protocol</span></span><span class="wiki-group-tally">2 pages</span></h3><div class="grid grid-wiki"><article class="card card-wiki" data-status="active"><header class="card-head"><h3 class="card-title"><a href="wiki.html#protocol-architecture">Architecture and Implementation Boundary</a></h3><span class="status-dot status-active" title="active"></span></header><dl class="card-stats"><div><dt>open Q</dt><dd>2</dd></div><div><dt>src</dt><dd>1</dd></div></dl><footer class="card-foot"><span>2026-09-20</span></footer></article>
+<article class="card card-wiki" data-status="active"><header class="card-head"><h3 class="card-title"><a href="wiki.html#protocol-proof-of-publication">Proof of Publication (PoPub)</a></h3><span class="status-dot status-active" title="active"></span></header><dl class="card-stats"><div><dt>open Q</dt><dd>3</dd></div><div><dt>src</dt><dd>1</dd></div></dl><footer class="card-foot"><span>2026-09-20</span></footer></article></div></section>
+<section class="wiki-group"><h3 class="wiki-group-head"><span class="wiki-group-name"><span class="wiki-group-numeral">iii</span><span>economics</span></span><span class="wiki-group-tally">1 page</span></h3><div class="grid grid-wiki"><article class="card card-wiki" data-status="active"><header class="card-head"><h3 class="card-title"><a href="wiki.html#economics-wrf-token">WRF Economics and WRC-20 Boundary</a></h3><span class="status-dot status-active" title="active"></span></header><dl class="card-stats"><div><dt>open Q</dt><dd>2</dd></div><div><dt>src</dt><dd>1</dd></div></dl><footer class="card-foot"><span>2026-09-20</span></footer></article></div></section>
+<section class="wiki-group"><h3 class="wiki-group-head"><span class="wiki-group-name"><span class="wiki-group-numeral">iv</span><span>implementation</span></span><span class="wiki-group-tally">1 page</span></h3><div class="grid grid-wiki"><article class="card card-wiki" data-status="active"><header class="card-head"><h3 class="card-title"><a href="wiki.html#implementation-tech-stack">Reference Implementation Tech Stack</a></h3><span class="status-dot status-active" title="active"></span></header><dl class="card-stats"><div><dt>open Q</dt><dd>2</dd></div><div><dt>src</dt><dd>1</dd></div></dl><footer class="card-foot"><span>2026-09-20</span></footer></article></div></section>
+<section class="wiki-group"><h3 class="wiki-group-head"><span class="wiki-group-name"><span class="wiki-group-numeral">vi</span><span>release</span></span><span class="wiki-group-tally">1 page</span></h3><div class="grid grid-wiki"><article class="card card-wiki" data-status="active"><header class="card-head"><h3 class="card-title"><a href="wiki.html#release-testnet-roadmap">Testnet Roadmap and Reachability</a></h3><span class="status-dot status-active" title="active"></span></header><dl class="card-stats"><div><dt>open Q</dt><dd>2</dd></div><div><dt>src</dt><dd>1</dd></div></dl><footer class="card-foot"><span>2026-09-20</span></footer></article></div></section>
+<section class="wiki-group"><h3 class="wiki-group-head"><span class="wiki-group-name"><span class="wiki-group-numeral">vii</span><span>synthesis</span></span><span class="wiki-group-tally">2 pages</span></h3><div class="grid grid-wiki"><article class="card card-wiki" data-status="active"><header class="card-head"><h3 class="card-title"><a href="wiki.html#synthesis-cross-section-tradeoffs">Cross-Section Design Tradeoffs</a></h3><span class="status-dot status-active" title="active"></span></header><dl class="card-stats"><div><dt>open Q</dt><dd>2</dd></div><div><dt>src</dt><dd>3</dd></div></dl><footer class="card-foot"><span>2026-09-20</span></footer></article>
+<article class="card card-wiki" data-status="active"><header class="card-head"><h3 class="card-title"><a href="wiki.html#synthesis-open-questions-rollup">Open Questions Rollup</a></h3><span class="status-dot status-active" title="active"></span></header><dl class="card-stats"><div><dt>open Q</dt><dd>0</dd></div><div><dt>src</dt><dd>5</dd></div></dl><footer class="card-foot"><span>2026-09-20</span></footer></article></div></section>
+    </section>
+
+    <hr class="ornament" aria-hidden="true">
+
+    <section class="catalog catalog-repos">
+      <header class="catalog-head">
+        <div class="catalog-kicker">§ VII</div>
+        <h2 class="catalog-title">Repositories</h2>
+        <p class="catalog-blurb">0 repos under github.com/wrfcoin · 0 open PRs · 0 commits in the last seven days.</p>
+      </header>
+
+      <div class="repo-group">
+        <h3 class="repo-group-head"><span class="repo-group-numeral">i</span> Active</h3>
+        <div class="grid grid-repos"></div>
+      </div>
+
+      <div class="repo-group">
+        <h3 class="repo-group-head"><span class="repo-group-numeral">ii</span> Greenfield</h3>
+        <div class="grid grid-repos"></div>
+      </div>
+
+      <div class="repo-group">
+        <h3 class="repo-group-head"><span class="repo-group-numeral">iii</span> Archived</h3>
+        <div class="grid grid-repos"></div>
+      </div>
+    </section>
+
+    <hr class="ornament ornament-final" aria-hidden="true">
+
+    <footer class="colophon">
+      <p class="colophon-lede">A Colophon</p>
+      <p>Generated by <code>scripts/generate_library.py</code>.</p>
+      <p>Wiki manifest sourced from <code>wiki/data/wiki-manifest.json</code>.</p>
+      <p>Repo state cached at <code>cache/repo-state.json</code> · testnet state at <code>cache/testnet-state.json</code>.</p>
+      <p class="colophon-mark">2026-10-18 23:47 UTC · ⁂</p>
+    </footer>
+
+  </div>
+</body>
+</html>

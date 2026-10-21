@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The WRFCoin Wiki</title>
+  <link rel="stylesheet" href="assets/library.css">
+  <link rel="stylesheet" href="assets/wiki.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne:wght@400;500;600;700;800&family=DM+Sans:opsz,wght@9..40,300..700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="wiki-body">
+  <header class="wiki-masthead">
+    <div class="wiki-dateline">
+      <span class="dateline-mark">⁂</span>
+      WRFCoin Wiki · <a href="library.html">↩ back to the Library</a>
+    </div>
+    <h1 class="wiki-title">
+      <span class="title-the">The</span>
+      <span class="title-main">WRFCoin Wiki</span>
+    </h1>
+    <p class="wiki-subtitle">curated synthesis · 14 pages · 10 active · 15 sources cited · 23 open questions</p>
+    <p class="wiki-meta">generated 2026-10-18 23:47 UTC</p>
+  </header>
+
+  <div class="wiki-layout">
+    <aside class="wiki-sidebar">
+      <div class="wiki-search-wrap">
+        <input type="search" id="wiki-search" placeholder="filter pages…" autocomplete="off" />
+      </div>
+      <nav class="wiki-nav" aria-label="Wiki contents">
+<div class="nav-group" data-type="framing"><div class="nav-label"><span class="nav-numeral">i</span>framing</div>
+<a class="nav-item" href="#origin-story" data-status="active" data-search="origin story framing history design-evolution"><span class="nav-title">Origin Story</span><span class="nav-meta"><span class="status-dot status-active" title="active"></span><span class="nav-q">5Q</span></span></a>
+<a class="nav-item" href="#vision" data-status="active" data-search="vision framing vision mission"><span class="nav-title">Vision</span><span class="nav-meta"><span class="status-dot status-active" title="active"></span><span class="nav-q">5Q</span></span></a>
+</div>
+<div class="nav-group" data-type="protocol"><div class="nav-label"><span class="nav-numeral">ii</span>protocol</div>
+<a class="nav-item" href="#protocol-architecture" data-status="active" data-search="architecture and implementation boundary protocol architecture l1 planned"><span class="nav-title">Architecture and Implementation Boundary</span><span class="nav-meta"><span class="status-dot status-active" title="active"></span><span class="nav-q">2Q</span></span></a>
+<a class="nav-item" href="#protocol-proof-of-publication" data-status="active" data-search="proof of publication (popub) protocol consensus popub rewards"><span class="nav-title">Proof of Publication (PoPub)</span><span class="nav-meta"><span class="status-dot status-active" title="active"></span><span class="nav-q">3Q</span></span></a>
+<a class="nav-item" href="#protocol-README" data-status="stub" data-search="readme "><span class="nav-title">Readme</span><span class="nav-meta"><span class="status-dot status-stub" title="stub"></span><span class="nav-q">0Q</span></span></a>
+</div>
+<div class="nav-group" data-type="economics"><div class="nav-label"><span class="nav-numeral">iii</span>economics</div>
+<a class="nav-item" href="#economics-wrf-token" data-status="active" data-search="wrf economics and wrc-20 boundary economics token wrf planned"><span class="nav-title">WRF Economics and WRC-20 Boundary</span><span class="nav-meta"><span class="status-dot status-active" title="active"></span><span class="nav-q">2Q</span></span></a>
+</div>
+<div class="nav-group" data-type="implementation"><div class="nav-label"><span class="nav-numeral">iv</span>implementation</div>
+<a class="nav-item" href="#implementation-tech-stack" data-status="active" data-search="reference implementation tech stack implementation rust cryptography libp2p"><span class="nav-title">Reference Implementation Tech Stack</span><span class="nav-meta"><span class="status-dot status-active" title="active"></span><span class="nav-q">2Q</span></span></a>
+</div>
+<div class="nav-group" data-type="release"><div class="nav-label"><span class="nav-numeral">vi</span>release</div>
+<a class="nav-item" href="#release-testnet-roadmap" data-status="active" data-search="testnet roadmap and reachability release roadmap testnet readiness"><span class="nav-title">Testnet Roadmap and Reachability</span><span class="nav-meta"><span class="status-dot status-active" title="active"></span><span class="nav-q">2Q</span></span></a>
+</div>
+<div class="nav-group" data-type="synthesis"><div class="nav-label"><span class="nav-numeral">vii</span>synthesis</div>
+<a class="nav-item" href="#synthesis-cross-section-tradeoffs" data-status="active" data-search="cross-section design tradeoffs synthesis tradeoffs planned"><span class="nav-title">Cross-Section Design Tradeoffs</span><span class="nav-meta"><span class="status-dot status-active" title="active"></span><span class="nav-q">2Q</span></span></a>
+<a class="nav-item" href="#synthesis-open-questions-rollup" data-status="active" data-search="open questions rollup synthesis open-questions readiness"><span class="nav-title">Open Questions Rollup</span><span class="nav-meta"><span class="status-dot status-active" title="active"></span><span class="nav-q">0Q</span></span></a>
+<a class="nav-item" href="#synthesis-README" data-status="stub" data-search="readme "><span class="nav-title">Readme</span><span class="nav-meta"><span class="status-dot status-stub" title="stub"></span><span class="nav-q">0Q</span></span></a>
+</div>
+<div class="nav-group" data-type="sources"><div class="nav-label"><span class="nav-numeral">viii</span>sources</div>
+<a class="nav-item" href="#sources-README" data-status="stub" data-search="readme "><span class="nav-title">Readme</span><span class="nav-meta"><span class="status-dot status-stub" title="stub"></span><span class="nav-q">0Q</span></span></a>
+</div>
+<div class="nav-group" data-type="index"><div class="nav-label">index</div>
+<a class="nav-item" href="#index"><span class="nav-title">WRFCoin Wiki Index</span></a>
+</div>
+<div class="nav-group nav-group-secondary"><div class="nav-label">supporting</div>
+<a class="nav-item" href="#log"><span class="nav-title">Log</span></a>
+</div>
+</nav>
+    </aside>
+
+    <main class="wiki-main">
+      <article class="page" id="economics-wrf-token" data-type="economics" data-status="active"><header class="page-head"><div class="page-kicker">economics · <code>economics/wrf-token.md</code></div><h1 class="page-title">WRF Economics and WRC-20 Boundary</h1><div class="page-meta"><span class="meta-pill"><span class="status-dot status-active"></span>active</span><span class="meta-pill mono">1 sources</span><span class="meta-pill mono">2 open Q</span><span class="meta-pill mono">updated 2026-09-20</span><span class="meta-pill mono review">review 2026-12-20</span></div><div class="page-tags"><span class="tag">economics</span><span class="tag">token</span><span class="tag">wrf</span><span class="tag">planned</span></div></header><div class="page-body"><h1 id="wrf-economics-and-wrc-20-boundary">WRF Economics and WRC-20 Boundary</h1>
+<h2 id="current">Current</h2>
+<p>The L1 records contribution and reward state for the implemented commit/reveal/attestation flow. That does not establish a complete token market, public economic service, or geographically fair reward system. <code>core4#3240</code> tracks a known location-reference defect.</p>
+<h2 id="planned">Planned</h2>
+<p>Validator stake, full slashing (only partial slashing exists today; see <a class="wikilink" href="#protocol-proof-of-publication">protocol/proof-of-publication</a>), holder governance, WRC-20, issuance fees, sidechain/L2 fee flows, carbon credits, ESG instruments, RWA products, and marketplaces are planned. No current testnet claim should describe those target economics as active.</p>
+<p>The investor-equity/contributor-token separation is project design intent, not legal advice or a claim of regulatory status.</p>
+<h2 id="evidence">Evidence</h2>
+<ul>
+<li><code>whitepaper/05-tokenomics.md</code> now labels target economics explicitly.</li>
+<li><code>whitepaper/04-consensus.md</code> identifies implemented consensus and planned</li>
+</ul>
+<p>incentive behavior.</p>
+<ul>
+<li><code>STATUS.md</code> records the dated capability boundary.</li>
+</ul></div></article>
+<article class="page" id="implementation-tech-stack" data-type="implementation" data-status="active"><header class="page-head"><div class="page-kicker">implementation · <code>implementation/tech-stack.md</code></div><h1 class="page-title">Reference Implementation Tech Stack</h1><div class="page-meta"><span class="meta-pill"><span class="status-dot status-active"></span>active</span><span class="meta-pill mono">1 sources</span><span class="meta-pill mono">2 open Q</span><span class="meta-pill mono">updated 2026-09-20</span><span class="meta-pill mono review">review 2026-12-20</span></div><div class="page-tags"><span class="tag">implementation</span><span class="tag">rust</span><span class="tag">cryptography</span><span class="tag">libp2p</span></div></header><div class="page-body"><h1 id="reference-implementation-tech-stack">Reference Implementation Tech Stack</h1>
+<h2 id="current">Current</h2>
+<p>The reference implementation is a Rust Cargo workspace whose active packages include <code>native-chain</code>, <code>shared-protocol</code>, <code>consensus-engines</code>, <code>p2p</code>, privacy components, and <code>tools/cli</code>. The node uses libp2p; the old minimal-TCP migration description is obsolete.</p>
+<p>New wallets use ed25519. The settled derivation is BIP-39 mnemonic to seed with an empty passphrase, followed by the SLIP-0010 ed25519 master key with no child path. Addresses are <code>0x</code> plus the first 20 bytes of SHA3-256(public key). Legacy secp256k1 addresses are receive-only. Clients, not the backend, sign.</p>
+<h2 id="boundaries">Boundaries</h2>
+<p>Post-quantum cryptography, active L2s, and mainnet operations remain planned. The application-layer DeFi direction is read/quote-only and simulated; it is not an L1 consensus primitive and cannot move balances.</p>
+<p>The presence of a test or workflow is not itself evidence: skipped, zero-step, or infrastructure-blocked checks do not prove a claim.</p>
+<h2 id="evidence">Evidence</h2>
+<ul>
+<li><code>whitepaper/06-tech-stack.md</code> records these choices and boundaries.</li>
+<li>The cross-client key fixture is tracked by <code>core4#3234</code>.</li>
+<li>The checked node API description is tracked by <code>core4#3262</code>.</li>
+</ul></div></article>
+<article class="page" id="index" data-type="index" data-status="active"><header class="page-head"><div class="page-kicker">index · <code>index.md</code></div><h1 class="page-title">WRFCoin Wiki Index</h1><div class="page-meta"><span class="meta-pill"><span class="status-dot status-active"></span>active</span><span class="meta-pill mono">0 sources</span><span class="meta-pill mono">0 open Q</span><span class="meta-pill mono">updated 2026-09-20</span></div><div class="page-tags"><span class="tag">index</span></div></header><div class="page-body"><h1 id="wrfcoin-wiki">WRFCoin Wiki</h1>
+<p>This wiki is the maintained knowledge layer for the WRFCoin protocol and its development environment. It is separate from the Heifer Zephyr instrument wiki and is tied to the Linux-side WRFCoin repo at <code>~/wrfcoin/</code>, the whitepaper at <code>./</code>, the sprint operating tooling, and the audit/CI surface.</p>
+<h2 id="status-refresh-2026-09-20">Status refresh (2026-09-20)</h2>
+<p>The root <a href="../STATUS.md">implementation-status matrix</a> is the first stop for current versus planned capabilities. Repository implementation, pinned private deployment state, and public reachability are separate claims.</p>
+<h2 id="first-pass-ingest-2026-05-18">First-Pass Ingest (2026-05-18)</h2>
+<p>The wiki's first content pass is the seven whitepaper chapters plus two synthesis pages.</p>
+<h3 id="framing">Framing</h3>
+<ul>
+<li><a class="wikilink" href="#vision">vision</a> — mission, additive-not-replacement framing, three architectural requirements.</li>
+<li><a class="wikilink" href="#origin-story">origin-story</a> — Phase 1 (Dec 2022) → Phase 2 Skyward → Phase 3 Reboot (Feb 2025).</li>
+</ul>
+<h3 id="protocol">Protocol</h3>
+<ul>
+<li><a class="wikilink" href="#protocol-architecture">protocol/architecture</a> — Three-layer split: L1 settlement, L2 rollups, DAG-based data sidechains.</li>
+<li><a class="wikilink" href="#protocol-proof-of-publication">protocol/proof-of-publication</a> — PoPub consensus: four roles, stake-and-slash, deferred Sybil-resistance design.</li>
+</ul>
+<h3 id="economics">Economics</h3>
+<ul>
+<li><a class="wikilink" href="#economics-wrf-token">economics/wrf-token</a> — current reward-state boundary and planned WRF/WRC-20 economics.</li>
+</ul>
+<h3 id="implementation">Implementation</h3>
+<ul>
+<li><a class="wikilink" href="#implementation-tech-stack">implementation/tech-stack</a> — current Rust workspace, ed25519 key scheme, and libp2p boundary.</li>
+</ul>
+<h3 id="release">Release</h3>
+<ul>
+<li><a class="wikilink" href="#release-testnet-roadmap">release/testnet-roadmap</a> — private deployment versus public reachability and capability gates.</li>
+</ul>
+<h3 id="synthesis">Synthesis</h3>
+<ul>
+<li><a class="wikilink" href="#synthesis-open-questions-rollup">synthesis/open-questions-rollup</a> — 51 open questions grouped by source page and theme.</li>
+<li><a class="wikilink" href="#synthesis-cross-section-tradeoffs">synthesis/cross-section-tradeoffs</a> — Five load-bearing design tensions that span chapters.</li>
+</ul>
+<h2 id="retrieval">Retrieval</h2>
+<p>Search the wiki and source streams directly with bounded repository tools:</p>
+<pre><code class="lang-bash">rg -n &quot;&lt;term&gt;&quot; wiki whitepaper
+sed -n &#x27;1,220p&#x27; wiki/&lt;path&gt;.md</code></pre>
+<h2 id="source-streams">Source Streams</h2>
+<p>The wiki's curated pages sit on top of these raw source streams:</p>
+<ul>
+<li><code>wrfcoin-wiki</code> — this wiki.</li>
+<li><code>core4-docs</code> — <code>core4/docs/</code> raw platform documentation.</li>
+<li><code>audits</code> — <code>docs/audit/</code> audit reports.</li>
+<li><code>sprint-handoffs</code> — <code>docs/plans/</code> sprint persona handoffs.</li>
+</ul>
+<p>Additional source streams that haven't yet been indexed but should be on the next ingest plan: testnet operations guides, CI workflow definitions, GitHub issues/PRs, release notes, the core4 Rust workspace itself for in-code documentation.</p>
+<h2 id="library-bridge">Library Bridge</h2>
+<p>The docs repo has a generated <code>site/library.html</code> library bridge generated by <code>scripts/generate_library.py</code>. It reads this wiki's <code>wiki/data/wiki-manifest.json</code> and reports current wiki coverage (page count by status, total sources cited, total open questions). Run <code>python3 wiki/scripts/generate_wiki_manifest.py --wiki-root wiki --output wiki/data/wiki-manifest.json</code> after any ingest, then re-run the library generator to refresh the site surface.</p>
+<h2 id="next-ingest-candidates">Next Ingest Candidates</h2>
+<p>When the second ingest pass runs, the most valuable sources to bring in are likely:</p>
+<ol>
+<li><strong><code>~/wrfcoin/CLAUDE.md</code></strong> — fresher description of the actual <code>core4/</code> workspace than the whitepaper's tech-stack chapter. Resolves the documented whitepaper-vs-core4 workspace drift.</li>
+<li><strong><code>~/wrfcoin/core4/docs/</code></strong> — platform docs covering subsystems the whitepaper enumerates but does not specify (consensus engines, p2p, privacy).</li>
+<li><strong><code>~/wrfcoin/docs/plans/</code></strong> — recent sprint handoffs that document what's been implemented vs what's still planned. Essential for closing Phase-1-completion-status open questions.</li>
+<li><strong><code>~/wrfcoin/docs/audit/</code></strong> — audit findings that map to <a class="wikilink" href="#protocol-proof-of-publication">protocol/proof-of-publication</a> open questions on Sybil resistance and slashing.</li>
+<li><strong>Whitepaper revisions</strong> — when chapter 06 (tech-stack) is revised to match the actual <code>core4/</code> workspace, refresh <a class="wikilink" href="#implementation-tech-stack">implementation/tech-stack</a> sources and resolve the workspace-drift open question.</li>
+</ol>
+<h2 id="maintenance">Maintenance</h2>
+<p>When a query creates reusable project understanding, file it as an <code>answer-as-page</code> under <code>synthesis/</code>, append a <code>log.md</code> entry, and re-run the manifest + library generators.</p></div></article>
+<article class="page" id="log" data-type="framing" data-status="stub"><header class="page-head"><div class="page-kicker">framing · <code>log.md</code></div><h1 class="page-title">Log</h1><div class="page-meta"><span class="meta-pill"><span class="status-dot status-stub"></span>stub</span><span class="meta-pill mono">0 sources</span><span class="meta-pill mono">0 open Q</span></div></header><div class="page-body"><h1 id="wrfcoin-wiki-log">WRFCoin Wiki Log</h1>
+<p>Append-only record of wiki maintenance, source ingests, queries, and lint passes. Single-line prefix format so <code>grep &quot;^## \[&quot; log.md | tail -10</code> gives a clean recent-activity view.</p>
+<pre><code class="lang-markdown">## [YYYY-MM-DD] ingest | Source Title
+
+- Source: `path/or/url`
+- Pages touched: [[page-a]], [[page-b]]
+- Summary: One or two sentences.
+- Follow-ups: Open questions or next actions.</code></pre>
+<h2 id="2026-05-25-migrate-docs-repo-organization">[2026-05-25] migrate | Docs repo organization</h2>
+<ul>
+<li>Source: Linux-side staging wiki and the existing <code>wrfcoin/docs</code> clone.</li>
+<li>Pages touched: the historical agent guide (no longer published), <a class="wikilink" href="#index">index</a>, <code>wiki/data/wiki-manifest.json</code>, <code>site/wiki.html</code>, <code>site/library.html</code>.</li>
+<li>Summary: Migrated the wiki into the private docs repo, updated generator paths to be repo-local, and kept the generated site surfaces as committed browsing artifacts.</li>
+<li>Follow-ups: Run a dedicated lint pass to replace placeholder README pages and ingest current product-repo docs into synthesis pages.</li>
+</ul>
+<h2 id="2026-05-18-migrate-v1-v2-schema-upgrade">[2026-05-18] migrate | v1 → v2 schema upgrade</h2>
+<ul>
+<li>Source: Third-agent ingest plan; instrument-showcase v2 schema reference.</li>
+<li>Pages touched: the historical agent guide (no longer published), <a class="wikilink" href="#index">index</a>, directory contract (removed <code>architecture/</code>, <code>operations/</code>, <code>security/</code>; added <code>economics/</code>, <code>implementation/</code>, <code>governance/</code>, <code>release/</code>, <code>data/</code>, <code>scripts/</code>).</li>
+<li>Summary: Wiki upgraded to v2 frontmatter schema. New directory contract aligned to the whitepaper's chapter structure. QMD retrieval-layer section preserved and extended with cross-domain library-bridge wiring.</li>
+<li>Follow-ups: First-pass content ingest (next entries).</li>
+</ul>
+<h2 id="2026-05-18-scaffold-manifest-generator-and-library-bridge">[2026-05-18] scaffold | Manifest generator and library bridge</h2>
+<ul>
+<li>Source: <code>scripts/generate_library.py</code> consumes <code>wiki-manifest.json</code> at three candidate paths.</li>
+<li>Pages touched: <code>scripts/generate_wiki_manifest.py</code>, <code>data/wiki-manifest.json</code>, <code>site/library.html</code>.</li>
+<li>Summary: Created the wiki-manifest generator (parses YAML frontmatter, emits <code>wrfcoin-wiki-manifest-v1</code>). Ran it. Ran the cross-domain library generator with <code>--wiki-manifest</code> pointing at it. <code>library.html</code> now reports wiki coverage from this wiki's frontmatter.</li>
+<li>Follow-ups: Add an aggregate open-questions script to companion the manifest generator.</li>
+</ul>
+<h2 id="2026-05-18-ingest-whitepaper-chapter-01-vision">[2026-05-18] ingest | Whitepaper chapter 01 — Vision</h2>
+<ul>
+<li>Source: <code>whitepaper/01-vision.md</code></li>
+<li>Pages touched: <a class="wikilink" href="#vision">vision</a></li>
+<li>Summary: Created framing page from chapter 01. Captured the three-brittle-assumptions / three-changes framing and the three architectural requirements the vision implies. 5 open questions raised, mostly around whether vision claims (institutional trust under climate pressure, long-tail data volume, additive-not-replacement) are anchored to evidence vs aspirational.</li>
+<li>Follow-ups: Resolve the "first 12-month proof-of-life metric" question once a hyperlocal use case is committed to in <a class="wikilink" href="#release-testnet-roadmap">release/testnet-roadmap</a>.</li>
+</ul>
+<h2 id="2026-05-18-ingest-whitepaper-chapter-02-origin-story">[2026-05-18] ingest | Whitepaper chapter 02 — Origin Story</h2>
+<ul>
+<li>Source: <code>whitepaper/02-origin-story.md</code></li>
+<li>Pages touched: <a class="wikilink" href="#origin-story">origin-story</a></li>
+<li>Summary: Created framing page from chapter 02. Three project phases (Phase 1 Dec 2022, Skyward Jan 2023, Reboot Feb 2025) with the Reboot identified as the design-defining moment. 5 open questions raised, mostly around what survived from Skyward, Meta-OS specificity, and the legal/governance status of the investor-vs-contributor distinction.</li>
+<li>Follow-ups: Cross-reference Meta-OS framing against actual core4 / sprint state to determine whether it's a Phase-3 deliverable or a cross-cutting capability.</li>
+</ul>
+<h2 id="2026-05-18-ingest-whitepaper-chapter-03-three-layer-architecture">[2026-05-18] ingest | Whitepaper chapter 03 — Three-Layer Architecture</h2>
+<ul>
+<li>Source: <code>whitepaper/03-architecture.md</code></li>
+<li>Pages touched: <a class="wikilink" href="#protocol-architecture">protocol/architecture</a></li>
+<li>Summary: Created protocol page from chapter 03. L1 (settlement) + L2 (rollups) + Data Sidechains (DAG) split. 7 open questions raised: L2 type, DAG protocol identity, batch cadence, cross-layer slashing, data-sidechain code location, public API interface, IoT submission permissioning.</li>
+<li>Follow-ups: Highest-leverage open items are cross-layer slashing protocol and DAG protocol identity. Both block <a class="wikilink" href="#synthesis-cross-section-tradeoffs">synthesis/cross-section-tradeoffs</a> tradeoffs #1 and #2.</li>
+</ul>
+<h2 id="2026-05-18-ingest-whitepaper-chapter-04-proof-of-publication">[2026-05-18] ingest | Whitepaper chapter 04 — Proof of Publication</h2>
+<ul>
+<li>Source: <code>whitepaper/04-consensus.md</code></li>
+<li>Pages touched: <a class="wikilink" href="#protocol-proof-of-publication">protocol/proof-of-publication</a></li>
+<li>Summary: Created protocol page from chapter 04. Four roles (contributors, validators, forecasters, verifiers), stake-and-slash for first two, reputation-weighted for forecasters, audit-of-audits for verifiers. 8 open questions raised, four of them lifted verbatim from the whitepaper's own "what's still being designed" list.</li>
+<li>Follow-ups: Sybil resistance is the highest-priority open item. Cross-link to <a class="wikilink" href="#synthesis-cross-section-tradeoffs">synthesis/cross-section-tradeoffs</a> tradeoff #1 PoPub-latency-vs-economics and tradeoff #2 sidechain-autonomy.</li>
+</ul>
+<h2 id="2026-05-18-ingest-whitepaper-chapter-05-wrf-wrc-20">[2026-05-18] ingest | Whitepaper chapter 05 — WRF &amp; WRC-20</h2>
+<ul>
+<li>Source: <code>whitepaper/05-tokenomics.md</code></li>
+<li>Pages touched: <a class="wikilink" href="#economics-wrf-token">economics/wrf-token</a></li>
+<li>Summary: Created economics page from chapter 05. WRF utility token (4 roles: reward, stake, governance, settlement), WRC-20 ecosystem standard with first-class data-linkage / validation-gates / impact-metadata, investor-equity-vs-contributor-token split, DeFi explicitly deferred. 8 open questions raised, dominated by deferred parameters + missing WRC-20 specification document.</li>
+<li>Follow-ups: Locate or commission the WRC-20 specification document; resolve slashing-destination (also open in <a class="wikilink" href="#protocol-proof-of-publication">protocol/proof-of-publication</a>).</li>
+</ul>
+<h2 id="2026-05-18-ingest-whitepaper-chapter-06-tech-stack">[2026-05-18] ingest | Whitepaper chapter 06 — Tech Stack</h2>
+<ul>
+<li>Source: <code>whitepaper/06-tech-stack.md</code></li>
+<li>Pages touched: <a class="wikilink" href="#implementation-tech-stack">implementation/tech-stack</a></li>
+<li>Summary: Created implementation page from chapter 06. Rust + Cargo workspace, conservative cryptography (SHA-256 / Ed25519 / BIP-39; the original chapter also listed Bech32, which was later corrected — addresses are <code>0x</code> + hex SHA3-256), libp2p planned post-testnet, supply-chain tooling on every CI build. 8 open questions raised. Most material: whitepaper workspace structure (<code>core/network/wallet/cli</code>) does not match the actual <code>~/wrfcoin/core4/</code> workspace (<code>shared-protocol/native-chain/consensus-engines/p2p/privacy/...</code>).</li>
+<li>Follow-ups: Whitepaper-vs-core4 workspace drift is the most actionable open item. Either update the whitepaper or write a synthesis page that maps both views.</li>
+</ul>
+<h2 id="2026-05-18-ingest-whitepaper-chapter-07-testnet-roadmap">[2026-05-18] ingest | Whitepaper chapter 07 — Testnet Roadmap</h2>
+<ul>
+<li>Source: <code>whitepaper/07-roadmap.md</code></li>
+<li>Pages touched: <a class="wikilink" href="#release-testnet-roadmap">release/testnet-roadmap</a></li>
+<li>Summary: Created release page from chapter 07. Four phases (Foundation / Weather Oracle / Meta-OS / Ecosystem). Testnet target mid-2026. Capability-gated, not date-fixed. 9 open questions raised. Phase 1 completion status is the most pressing — the whitepaper text predates the current Linux-side state (node host testnet operating, 1555+ blocks, second peer online) which looks like Phase-1 endgame.</li>
+<li>Follow-ups: Declare Phase 1 complete with explicit evidence pointers, or describe the gap that keeps it open.</li>
+</ul>
+<h2 id="2026-05-18-answer-as-page-open-questions-rollup">[2026-05-18] answer-as-page | Open Questions Rollup</h2>
+<ul>
+<li>Source: All seven first-ingest pages.</li>
+<li>Pages touched: <a class="wikilink" href="#synthesis-open-questions-rollup">synthesis/open-questions-rollup</a></li>
+<li>Summary: Aggregated all 50 chapter-page open questions + 1 self-rollup-meta question into one page, grouped by source page, with a Theme Index that clusters them into 7 themes (anti-collusion, cross-layer slashing, tokenomics parameters, phase definitions, workspace drift, governance/legal posture, aspirational framing).</li>
+<li>Follow-ups: Add a <code>scripts/aggregate_open_questions.py</code> companion to the manifest generator so this page rebuilds mechanically.</li>
+</ul>
+<h2 id="2026-05-18-answer-as-page-cross-section-design-tradeoffs">[2026-05-18] answer-as-page | Cross-Section Design Tradeoffs</h2>
+<ul>
+<li>Source: All seven first-ingest pages.</li>
+<li>Pages touched: <a class="wikilink" href="#synthesis-cross-section-tradeoffs">synthesis/cross-section-tradeoffs</a></li>
+<li>Summary: Surfaced 5 load-bearing design tensions that span chapters: (1) PoPub data-publication latency vs validator economics, (2) sidechain autonomy vs L1 settlement guarantees, (3) WRC-20 standard scope vs developer ergonomics, (4) anti-speculation tokenomics vs liquidity / network effects, (5) single-developer pace vs Phase-2 ambition. Each names where the tension shows up across chapters, what the design seems to want, and what would close the tradeoff.</li>
+<li>Follow-ups: As project commits to specific positions, file resolutions as separate <code>synthesis/&lt;slug&gt;.md</code> pages and strikethrough the tension above.</li>
+</ul>
+<h2 id="2026-09-20-ingest-public-documentation-truth-status-refresh">[2026-09-20] ingest | Public documentation truth-status refresh</h2>
+<ul>
+<li>Source: readiness evidence, current whitepaper chapters, and implementation references.</li>
+<li>Pages touched: <a class="wikilink" href="#index">index</a>, <a class="wikilink" href="#protocol-architecture">protocol/architecture</a>, <a class="wikilink" href="#protocol-proof-of-publication">protocol/proof-of-publication</a>, <a class="wikilink" href="#economics-wrf-token">economics/wrf-token</a>, <a class="wikilink" href="#implementation-tech-stack">implementation/tech-stack</a>, <a class="wikilink" href="#release-testnet-roadmap">release/testnet-roadmap</a>.</li>
+<li>Summary: Separated implemented, partial, planned, and not-offered capabilities; recorded the deployed-versus-main gap; pinned the ed25519/legacy-secp256k1 boundary; removed the obsolete minimal-TCP and date-target framing.</li>
+<li>Follow-ups: Re-check public reachability only after the infra endpoint/status work is deployed and human visibility gates are complete.</li>
+</ul></div></article>
+<article class="page" id="origin-story" data-type="framing" data-status="active"><header class="page-head"><div class="page-kicker">framing · <code>origin-story.md</code></div><h1 class="page-title">Origin Story</h1><div class="page-meta"><span class="meta-pill"><span class="status-dot status-active"></span>active</span><span class="meta-pill mono">1 sources</span><span class="meta-pill mono">5 open Q</span><span class="meta-pill mono">updated 2026-05-18</span></div><div class="page-tags"><span class="tag">framing</span><span class="tag">history</span><span class="tag">design-evolution</span></div></header><div class="page-body"><h1 id="origin-story">Origin Story</h1>
+<h2 id="overview">Overview</h2>
+<p>Wrfcoin has been through three design phases over roughly two and a half years, and the current shape only stabilized in the third. The history matters because each rejection sharpened the design — particularly the Phase 3 (Feb 2025) reboot from "ERC-20 on Ethereum" to "own L1 with domain-specific consensus and token standard." Reading the origin story explains why the current architecture is what it is rather than what an from-scratch generic-blockchain designer would produce.</p>
+<h2 id="source-notes">Source Notes</h2>
+<ul>
+<li>[repo] <code>02-origin-story.md</code> — Phase 1 (Dec 2022, "Computing Weather Forecasts"): curiosity question about running WRF on volunteer compute, building on BOINC precedent (Folding@home, Einstein@Home, climateprediction.net) and Gridcoin's cryptocurrency-rewarded BOINC participation. Working name candidates included StormCoin, ClimateCoin, EcoCoin, EarthCoin, <strong>Skyward</strong>.</li>
+<li>[repo] <code>02-origin-story.md</code> — Phase 2 (Jan 2023, "Skyward"): first product-shaped design. Desktop client + mobile + web dashboard + IoT registration. ERC-20 token on Ethereum. Explored: Filecoin/IPFS/Storj storage, Golem compute, Azure/AWS fallbacks, DEX integration (Uniswap/SushiSwap/PancakeSwap), atomic swaps, zk-STARK privacy, AI-enhanced forecasting.</li>
+<li>[repo] <code>02-origin-story.md</code> — Phase 2 introduced the <strong>investors-as-equity-holders, contributors-as-token-earners</strong> distinction. The reasoning: keeping the token tied to verifiable work (not investor sale) keeps the center of gravity in <em>utility</em> rather than <em>speculation</em> and reduces regulatory ambiguity. This distinction survives in the current design.</li>
+<li>[repo] <code>02-origin-story.md</code> — Phase 2's biggest weakness in hindsight: tried to be a generic blockchain platform with a weather product on top. Tokenomics, consensus, and data model were generic-blockchain-shaped, applied to weather but not optimized for it.</li>
+<li>[repo] <code>02-origin-story.md</code> — Phase 3 (Feb 2025, "Wrfcoin Reboot") — four key shifts:</li>
+</ul>
+<ol>
+<li><strong>Own L1.</strong> Not a token on someone else's chain.</li>
+<li><strong>Three-layer architecture.</strong> L1 for settlement, L2 rollups for DeFi, DAG-based sidechains for data → <a class="wikilink" href="#protocol-architecture">protocol/architecture</a>.</li>
+<li><strong>Climate finance as first-class concern.</strong> WRC-20 standard so third-party climate-finance, ESG, regenerative-ag, RWA tokens can sit on top → <a class="wikilink" href="#economics-wrf-token">economics/wrf-token</a>.</li>
+<li><strong>Meta-OS concept.</strong> Wrfcoin as a coordination layer routing tasks to other DePIN networks (Render, Akash, Filecoin, Arweave, Chainlink) and rewarding results in WRF.</li>
+</ol>
+<ul>
+<li>[repo] <code>02-origin-story.md</code> — Timeline summary: Dec 2022 (Phase 1) → Jan 2023 (Skyward) → Feb 2025 (Reboot) → mid-2026 target (Testnet) → <a class="wikilink" href="#release-testnet-roadmap">release/testnet-roadmap</a>.</li>
+</ul>
+<h2 id="design-knowledge">Design Knowledge</h2>
+<p>The phase-3 reboot's deepest lesson: <strong>a generic-blockchain on a generic L1 has no real lever to optimize for high-volume environmental data + accuracy-rewarding consensus</strong>. The constraints of ERC-20 and Ethereum's general-purpose execution model meant the most distinctive design decisions had to be implemented <em>around</em> the chain rather than <em>as</em> the chain. Making Wrfcoin its own L1 unlocked: defining PoPub, defining WRC-20, choosing DAG shape for data, separating settlement from sensor ingest. That's the entire reason the current architecture has any non-trivial shape.</p>
+<p>The Skyward → Reboot transition also shows what gets <em>kept</em>: the contributor-token / investor-equity distinction, the multi-asset DePIN-ecosystem framing, and the WRF token name itself. These are the parts of Skyward that weren't ERC-20-shape-dependent.</p>
+<p>The Meta-OS framing is the most recent shift and is also the loosest. It's compatible with the rest of the design but doesn't yet impose specific protocol-level requirements beyond cross-chain task routing.</p>
+<h2 id="cross-links">Cross-Links</h2>
+<ul>
+<li><a class="wikilink" href="#vision">vision</a> — the long-term mission this history converged toward.</li>
+<li><a class="wikilink" href="#protocol-architecture">protocol/architecture</a> — the three-layer split the reboot produced.</li>
+<li><a class="wikilink" href="#protocol-proof-of-publication">protocol/proof-of-publication</a> — the consensus that the reboot's "own L1" decision made possible.</li>
+<li><a class="wikilink" href="#economics-wrf-token">economics/wrf-token</a> — WRC-20 and the contributor-vs-investor split that survived from Skyward.</li>
+<li><a class="wikilink" href="#implementation-tech-stack">implementation/tech-stack</a> — Rust workspace structure decided post-reboot.</li>
+<li><a class="wikilink" href="#release-testnet-roadmap">release/testnet-roadmap</a> — the four phases the reboot scope produced.</li>
+</ul>
+<h2 id="open-questions">Open Questions</h2>
+<ol>
+<li>Skyward (Phase 2) explored zk-STARKs, atomic swaps, AI-enhanced forecasting, and DEX integrations. Are any of these retained for post-Phase-1 work, or fully discarded?</li>
+<li>Meta-OS framing ("Wrfcoin orchestrates environmental analysis across the broader DePIN ecosystem") is the most under-specified piece of the current design. What concrete protocol-level support does it require beyond cross-chain task routing? Is there a wrapping standard (wRNDR, wFIL, wLINK, wAKT, wTAO) spec?</li>
+<li>Investor-equity / contributor-token distinction is project convention. Is there a written governance or legal document codifying it, or does it live only in the whitepaper text?</li>
+<li>The two-and-a-half year history is single-developer pace. Is the current testnet target (mid-2026) revised against actual single-developer velocity, or is it inherited from the Phase 3 reboot announcement?</li>
+<li>Phase 1 → Phase 2 transition was Dec 2022 → Jan 2023 (one month). Phase 2 → Phase 3 was Jan 2023 → Feb 2025 (~25 months). The asymmetry is presented as "intermittent work" — what specifically broke the inertia in Feb 2025?</li>
+</ol>
+<h2 id="maintenance-notes">Maintenance Notes</h2>
+<ul>
+<li>This page is the canonical "why does it look this way?" answer; lint should keep it cited from architecture, consensus, and tokenomics pages.</li>
+<li>Refresh <code>last_ingest</code> only when chapter 02 itself is revised. Project-level history facts (founding year, phase names) should not silently drift here.</li>
+<li>When testnet ships, append a "Phase 4 — Testnet ships" entry to the chapter and to this page; do not retroactively rewrite the Phase 3 narrative.</li>
+</ul></div></article>
+<article class="page" id="protocol-README" data-type="protocol" data-status="stub"><header class="page-head"><div class="page-kicker">protocol · <code>protocol/README.md</code></div><h1 class="page-title">Readme</h1><div class="page-meta"><span class="meta-pill"><span class="status-dot status-stub"></span>stub</span><span class="meta-pill mono">0 sources</span><span class="meta-pill mono">0 open Q</span></div></header><div class="page-body"><h1 id="protocol">Protocol</h1>
+<p>Token, consensus, emissions, transaction, NFT, bridge, and protocol concept pages live here.</p></div></article>
+<article class="page" id="protocol-architecture" data-type="protocol" data-status="active"><header class="page-head"><div class="page-kicker">protocol · <code>protocol/architecture.md</code></div><h1 class="page-title">Architecture and Implementation Boundary</h1><div class="page-meta"><span class="meta-pill"><span class="status-dot status-active"></span>active</span><span class="meta-pill mono">1 sources</span><span class="meta-pill mono">2 open Q</span><span class="meta-pill mono">updated 2026-09-20</span><span class="meta-pill mono review">review 2026-12-20</span></div><div class="page-tags"><span class="tag">protocol</span><span class="tag">architecture</span><span class="tag">l1</span><span class="tag">planned</span></div></header><div class="page-body"><h1 id="architecture-and-implementation-boundary">Architecture and Implementation Boundary</h1>
+<h2 id="current">Current</h2>
+<p>Wrfcoin currently has one Proof-of-Publication L1. Its implemented environmental-data flow is commit, reveal, oracle attestation, quorum decision, and deterministic reward state. The Actix <code>launch_api</code> route registration is the source of truth for the node HTTP surface.</p>
+<p>The repository can be ahead of the private deployment. “Implemented” therefore does not mean “publicly reachable”; use <a class="wikilink" href="#release-testnet-roadmap">release/testnet-roadmap</a> and the root <code>STATUS.md</code> for that boundary.</p>
+<h2 id="planned">Planned</h2>
+<p>L2 rollups, a DAG data sidechain, full stake slashing (only partial slashing exists today), carbon/RWA markets, and cross-layer accountability are planned. They are not active testnet layers or guarantees. The old three-layer diagram describes target architecture only.</p>
+<h2 id="implementation-map">Implementation map</h2>
+<p>Relevant Rust workspace packages include <code>native-chain</code>, <code>shared-protocol</code>, <code>consensus-engines</code>, <code>p2p</code>, privacy tooling, and <code>tools/cli</code>. A crate's presence does not prove it is selected or healthy in a deployed node.</p>
+<h2 id="evidence">Evidence</h2>
+<ul>
+<li><code>whitepaper/03-architecture.md</code> records the current/planned split.</li>
+<li><code>core4/native-chain/src/bin/launch_api/routes/mod.rs</code> registers served routes.</li>
+<li><code>core4#3262</code> tracks the checked first-tranche OpenAPI description.</li>
+<li><code>core4#3240</code> tracks the unresolved location-reference reward defect.</li>
+</ul></div></article>
+<article class="page" id="protocol-proof-of-publication" data-type="protocol" data-status="active"><header class="page-head"><div class="page-kicker">protocol · <code>protocol/proof-of-publication.md</code></div><h1 class="page-title">Proof of Publication (PoPub)</h1><div class="page-meta"><span class="meta-pill"><span class="status-dot status-active"></span>active</span><span class="meta-pill mono">1 sources</span><span class="meta-pill mono">3 open Q</span><span class="meta-pill mono">updated 2026-09-20</span><span class="meta-pill mono review">review 2026-12-20</span></div><div class="page-tags"><span class="tag">protocol</span><span class="tag">consensus</span><span class="tag">popub</span><span class="tag">rewards</span></div></header><div class="page-body"><h1 id="proof-of-publication-popub">Proof of Publication (PoPub)</h1>
+<h2 id="implemented-core">Implemented core</h2>
+<p>PoPub is the active native-chain consensus path. Contributors commit and reveal observations; oracle attesters submit signed votes; a configured quorum decides acceptance; and the L1 records contribution and reward state. The current private testnet registers three attesters with a quorum of two, but only two run online; losing either online attester stops contributions from finalizing even while blocks continue.</p>
+<h2 id="partial-economics">Partial economics</h2>
+<p>Reward and attestation machinery exists, but the broader four-role market is not complete. Forecasting and verifier economics are partial, and <code>core4#3240</code> tracks a known location-reference defect affecting reward fairness.</p>
+<h2 id="planned">Planned</h2>
+<p>Slashing is partial. On core4 <code>main</code>, three consecutive low-quality reveals that reached quorum cost a contributor 15 base units (0.00000015 WRF), and validators can be slashed for equivocation. A reveal-time out-of-range slash exists but has no effect (core4#3214, private). Slashing station owners for bad data was ruled in by the owner on 2026-09-21 and is still being designed (core4#3218, private).</p>
+<p>Variable-specific confidence thresholds, anti-collusion policy, forecaster reputation curves, and cross-layer accountability remain planned.</p>
+<h2 id="evidence">Evidence</h2>
+<ul>
+<li><code>whitepaper/04-consensus.md</code> records the implementation boundary.</li>
+<li><code>core4/native-chain/src/bin/launch_api/routes/oracle.rs</code> serves oracle routes.</li>
+<li><code>core4#3240</code> records the unresolved reward-fairness defect.</li>
+</ul></div></article>
+<article class="page" id="release-testnet-roadmap" data-type="release" data-status="active"><header class="page-head"><div class="page-kicker">release · <code>release/testnet-roadmap.md</code></div><h1 class="page-title">Testnet Roadmap and Reachability</h1><div class="page-meta"><span class="meta-pill"><span class="status-dot status-active"></span>active</span><span class="meta-pill mono">1 sources</span><span class="meta-pill mono">2 open Q</span><span class="meta-pill mono">updated 2026-09-20</span><span class="meta-pill mono review">review 2026-10-20</span></div><div class="page-tags"><span class="tag">release</span><span class="tag">roadmap</span><span class="tag">testnet</span><span class="tag">readiness</span></div></header><div class="page-body"><h1 id="testnet-roadmap-and-reachability">Testnet Roadmap and Reachability</h1>
+<h2 id="current-state">Current state</h2>
+<p>A private testnet exists and advances. Core L1, libp2p, wallet, commit/reveal, attestation, and reward-state behavior is implemented, but public reachability is <strong>PARTIAL</strong>. Repository <code>main</code>, pinned deployment revisions, and what a tester can reach are distinct facts.</p>
+<p>The public join path is not offered until endpoint documentation, faucet honesty, snapshot trust, operator guidance, history scanning, and human visibility gates are complete. Documentation does not perform deployment, restart, or repository-visibility actions.</p>
+<h2 id="capability-phases">Capability phases</h2>
+<table><thead><tr><th>Phase</th><th>Honest status</th><th>Boundary</th></tr></thead><tbody>
+<tr><td>Foundation</td><td>PARTIAL readiness</td><td>Private chain exists; public joining is not offered.</td></tr>
+<tr><td>Weather oracle</td><td>PARTIAL</td><td>Observation and attestation work; quality, fairness, reachability, and operator gates remain.</td></tr>
+<tr><td>Meta-OS integration</td><td>PLANNED</td><td>No cross-chain production workflow is offered.</td></tr>
+<tr><td>Ecosystem expansion</td><td>PLANNED</td><td>No WRC-20, RWA, or climate-finance product is offered.</td></tr>
+</tbody></table>
+<p>There is no date-certain public launch promise. Completion is evidence-gated, not inferred from a historical target date.</p>
+<h2 id="evidence">Evidence</h2>
+<ul>
+<li><code>STATUS.md</code> is the dated repository-level matrix.</li>
+<li><code>whitepaper/07-roadmap.md</code> separates current and planned capabilities.</li>
+<li><code>wrfcoin/infra</code> owns deployment, launch-gate, and operator evidence.</li>
+</ul></div></article>
+<article class="page" id="sources-README" data-type="sources" data-status="stub"><header class="page-head"><div class="page-kicker">sources · <code>sources/README.md</code></div><h1 class="page-title">Readme</h1><div class="page-meta"><span class="meta-pill"><span class="status-dot status-stub"></span>stub</span><span class="meta-pill mono">0 sources</span><span class="meta-pill mono">0 open Q</span></div></header><div class="page-body"><h1 id="sources">Sources</h1>
+<p>Stable summaries of substantial raw source documents live here. Raw project files remain the source of truth.</p></div></article>
+<article class="page" id="synthesis-README" data-type="synthesis" data-status="stub"><header class="page-head"><div class="page-kicker">synthesis · <code>synthesis/README.md</code></div><h1 class="page-title">Readme</h1><div class="page-meta"><span class="meta-pill"><span class="status-dot status-stub"></span>stub</span><span class="meta-pill mono">0 sources</span><span class="meta-pill mono">0 open Q</span></div></header><div class="page-body"><h1 id="synthesis">Synthesis</h1>
+<p>Cross-cutting project maps, decision records, launch readiness synthesis, contradiction notes, and roadmap pages live here.</p></div></article>
+<article class="page" id="synthesis-cross-section-tradeoffs" data-type="synthesis" data-status="active"><header class="page-head"><div class="page-kicker">synthesis · <code>synthesis/cross-section-tradeoffs.md</code></div><h1 class="page-title">Cross-Section Design Tradeoffs</h1><div class="page-meta"><span class="meta-pill"><span class="status-dot status-active"></span>active</span><span class="meta-pill mono">3 sources</span><span class="meta-pill mono">2 open Q</span><span class="meta-pill mono">updated 2026-09-20</span><span class="meta-pill mono review">review 2026-12-20</span></div><div class="page-tags"><span class="tag">synthesis</span><span class="tag">tradeoffs</span><span class="tag">planned</span></div></header><div class="page-body"><h1 id="cross-section-design-tradeoffs">Cross-Section Design Tradeoffs</h1>
+<p>This page records design questions, not current capabilities.</p>
+<h2 id="current-pressure-points">Current pressure points</h2>
+<ul>
+<li><strong>Availability versus quorum:</strong> the private testnet registers three attesters</li>
+</ul>
+<p>with a quorum of two, but only two run online, so losing either online attester stops real reveals from finalizing while the chain still advances.</p>
+<ul>
+<li><strong>Reward activity versus fairness:</strong> reward state exists, but a known</li>
+</ul>
+<p>location-reference defect prevents a geographically production-ready claim.</p>
+<ul>
+<li><strong>Repository versus deployment:</strong> code on <code>main</code> can be newer than pinned</li>
+</ul>
+<p>private images; source presence is not public reachability.</p>
+<ul>
+<li><strong>Public documentation versus release:</strong> documentation may be prepared before</li>
+</ul>
+<p>deployment, secret scanning, and human visibility decisions are complete.</p>
+<h2 id="planned-design-tensions">Planned-design tensions</h2>
+<ul>
+<li>L2 throughput versus the added proving/challenge trust model.</li>
+<li>DAG-sidechain autonomy versus L1 accountability and rollback limits.</li>
+<li>Rich WRC-20 environmental semantics versus implementer simplicity.</li>
+<li>Slashing strength versus calibrated evidence and false-positive risk.</li>
+<li>Broader DeFi utility versus the accepted read/quote-only simulated boundary.</li>
+</ul>
+<p>None of these planned designs should be inferred from the implemented L1.</p></div></article>
+<article class="page" id="synthesis-open-questions-rollup" data-type="synthesis" data-status="active"><header class="page-head"><div class="page-kicker">synthesis · <code>synthesis/open-questions-rollup.md</code></div><h1 class="page-title">Open Questions Rollup</h1><div class="page-meta"><span class="meta-pill"><span class="status-dot status-active"></span>active</span><span class="meta-pill mono">5 sources</span><span class="meta-pill mono">0 open Q</span><span class="meta-pill mono">updated 2026-09-20</span><span class="meta-pill mono review">review 2026-12-20</span></div><div class="page-tags"><span class="tag">synthesis</span><span class="tag">open-questions</span><span class="tag">readiness</span></div></header><div class="page-body"><h1 id="open-questions-rollup">Open Questions Rollup</h1>
+<h2 id="protocol-and-economics">Protocol and economics</h2>
+<ul>
+<li>What reviewed policy implements Sybil/collusion resistance and slashing?</li>
+<li>How will geographic reward fairness be measured and enforced?</li>
+<li>Which, if any, L2 and data-sidechain designs will be selected?</li>
+<li>What versioned specification and activation gate would define WRC-20?</li>
+</ul>
+<h2 id="release-and-operations">Release and operations</h2>
+<ul>
+<li>When do the generated endpoint/status artifacts match a deployed public cut?</li>
+<li>Which evidence closes faucet, snapshot-trust, operator-guide, secret-scan,</li>
+</ul>
+<p>visibility, and join-path gates?</p>
+<ul>
+<li>What measurable forecast-quality target closes the weather-oracle phase?</li>
+</ul>
+<h2 id="governance">Governance</h2>
+<ul>
+<li>Who approves consensus parameter, issuance, slashing, and visibility changes?</li>
+<li>What evidence gates a future mainnet or production-service decision?</li>
+</ul>
+<p>Until answered and implemented, these remain planned or partial—not current testnet guarantees.</p></div></article>
+<article class="page" id="vision" data-type="framing" data-status="active"><header class="page-head"><div class="page-kicker">framing · <code>vision.md</code></div><h1 class="page-title">Vision</h1><div class="page-meta"><span class="meta-pill"><span class="status-dot status-active"></span>active</span><span class="meta-pill mono">1 sources</span><span class="meta-pill mono">5 open Q</span><span class="meta-pill mono">updated 2026-05-18</span></div><div class="page-tags"><span class="tag">framing</span><span class="tag">vision</span><span class="tag">mission</span></div></header><div class="page-body"><h1 id="vision">Vision</h1>
+<h2 id="overview">Overview</h2>
+<p>Wrfcoin's stated purpose is to build a <strong>decentralized, hyperlocal, community-governed augmentation layer</strong> for environmental data and compute — explicitly additive to (not a replacement for) NOAA / ECMWF / NWS / equivalent institutional forecasting. The mission is positioned as a public-good problem solved by decentralized incentives: anyone can contribute data, anyone can contribute compute, anyone can build climate or environmental applications on top, and the protocol makes it costly to be wrong and rewarding to be right.</p>
+<p>The vision rests on three pre-conditions the whitepaper claims have only recently become true: cheap sensors, distributed compute (BOINC → Render / Akash / Bittensor), and mature cryptographic coordination. The combination supports a <em>long-tail</em> data commons that institutional forecasting can't economically build.</p>
+<h2 id="source-notes">Source Notes</h2>
+<ul>
+<li>[repo] <code>01-vision.md</code> — Three brittle assumptions the chapter names in current forecasting: (1) data flows from a small number of sources, (2) compute lives in a few supercomputers behind institutional walls, (3) the public is expected to <em>trust</em> the result on institutional reputation alone.</li>
+<li>[repo] <code>01-vision.md</code> — Three changes that opened the design space: cheap commodity sensors, decentralized compute precedent (BOINC, Render, Akash, Bittensor), and mature cryptographic coordination via blockchains.</li>
+<li>[repo] <code>01-vision.md</code> — Wrfcoin is explicitly <strong>not</strong>: (a) a speculation vehicle, (b) anti-institutional, (c) a single-app blockchain.</li>
+<li>[repo] <code>01-vision.md</code> — Vision implies three architectural requirements: accuracy-rewarding consensus → <a class="wikilink" href="#protocol-proof-of-publication">protocol/proof-of-publication</a>; multi-tier architecture separating settlement from sensor data → <a class="wikilink" href="#protocol-architecture">protocol/architecture</a>; a domain-specific token standard for third-party climate applications → <a class="wikilink" href="#economics-wrf-token">economics/wrf-token</a> (WRC-20).</li>
+</ul>
+<h2 id="design-knowledge">Design Knowledge</h2>
+<p>The vision chapter functions as a <strong>constraint generator</strong> for the rest of the whitepaper. Every later choice has to satisfy: additive to institutional forecasting (not replacement), pays contributors fairly, makes lying expensive, supports a third-party ecosystem of climate apps. The "infrastructure layer for environmental data" framing is what justifies separating L1 from data sidechains: a pure-finance L1 wouldn't need DAG-shaped sensor ingest, and a pure-data network wouldn't need WRF as a stake-and-slash asset.</p>
+<p>The deliberate distance from speculation framing (no investor token sales, no DeFi-first design) is a <em>strategic</em> choice, not a technical one — it shapes the regulatory posture, the contributor incentive structure, and which kinds of users the network optimizes for. The same protocol designed with a speculation-first posture would likely look quite different at the parameter and standard-library level.</p>
+<h2 id="cross-links">Cross-Links</h2>
+<ul>
+<li><a class="wikilink" href="#origin-story">origin-story</a> — the two-year evolution from "WRF on BOINC" to the current three-layer + PoPub design.</li>
+<li><a class="wikilink" href="#protocol-architecture">protocol/architecture</a> — the L1 / L2 / data-sidechain split this vision implies.</li>
+<li><a class="wikilink" href="#protocol-proof-of-publication">protocol/proof-of-publication</a> — the consensus mechanism that pays for accuracy rather than energy or capital.</li>
+<li><a class="wikilink" href="#economics-wrf-token">economics/wrf-token</a> — utility-token framing and WRC-20 as ecosystem standard.</li>
+<li><a class="wikilink" href="#synthesis-cross-section-tradeoffs">synthesis/cross-section-tradeoffs</a> — design tensions that the vision constrains downstream.</li>
+</ul>
+<h2 id="open-questions">Open Questions</h2>
+<ol>
+<li>The "institutional trust under climate pressure" claim is editorial framing — what evidence base (if any) should this wiki cite for it? Currently treated as motivation, not as a load-bearing premise.</li>
+<li>Phase 2 success ("measurably competitive with traditional sources for at least one hyperlocal use case") — what defines <em>measurable competitiveness</em> and what is the first target use case?</li>
+<li>Vision as "infrastructure layer for environmental data and climate finance" is multi-decade. What is the first 12-month proof-of-life metric the wiki should track against?</li>
+<li>Vision claims Wrfcoin is "not anti-institutional" and aims to augment NOAA / ECMWF. Are there documented institutional partnerships, pilots, or letters of intent? Or is the additive framing entirely aspirational at this stage?</li>
+<li>The "long tail of environmental data that institutions can't economically collect" claim is intuitive but not quantified. Is there an estimate of the addressable long-tail data volume Wrfcoin expects to host?</li>
+</ol>
+<h2 id="maintenance-notes">Maintenance Notes</h2>
+<ul>
+<li>Refresh <code>last_ingest</code> when chapter 01 is revised in the whitepaper repo.</li>
+<li>This page is <em>framing</em>, not <em>protocol</em> — it should age slowly. The Open Questions above are the most likely refresh trigger: as the project commits to a first hyperlocal use case or a measurable success metric, file the answer here and update the corresponding question status.</li>
+<li>When the testnet launches, the "no production network exists yet" framing in chapter 06 changes — refresh this page's tense accordingly.</li>
+</ul></div></article>
+
+      <footer class="colophon">
+        <p class="colophon-lede">A Colophon</p>
+        <p>Generated by <code>wiki/scripts/generate_wiki.py</code>.</p>
+        <p>Wiki source at <code>wiki/</code>.</p>
+        <p class="colophon-mark">2026-10-18 23:47 UTC · ⁂</p>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+  // tiny search — filters sidebar nav items by data-search
+  (function(){
+    const input = document.getElementById('wiki-search');
+    if (!input) return;
+    const items = Array.from(document.querySelectorAll('.nav-item'));
+    input.addEventListener('input', () => {
+      const q = input.value.trim().toLowerCase();
+      items.forEach(it => {
+        const hay = (it.dataset.search || '') + ' ' + (it.textContent || '').toLowerCase();
+        it.classList.toggle('hidden', q && !hay.includes(q));
+      });
+      // hide groups that have no visible items
+      document.querySelectorAll('.nav-group').forEach(g => {
+        const any = Array.from(g.querySelectorAll('.nav-item')).some(i => !i.classList.contains('hidden'));
+        g.classList.toggle('hidden', !any);
+      });
+    });
+  })();
+  </script>
+</body>
+</html>

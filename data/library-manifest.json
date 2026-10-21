@@ -1,0 +1,122 @@
+{
+  "schema": "wrfcoin-library-manifest-v2",
+  "generated_at": "2026-10-18 23:47 UTC",
+  "chapters": [
+    {
+      "slug": "01-vision",
+      "kind": "chapter",
+      "workstream": "framing",
+      "status": "shipped",
+      "title": "Vision",
+      "blurb": "Problem, opportunity, public-good framing.",
+      "path": "whitepaper/01-vision.md",
+      "word_count": 684,
+      "open_questions": 0
+    },
+    {
+      "slug": "02-origin-story",
+      "kind": "chapter",
+      "workstream": "framing",
+      "status": "shipped",
+      "title": "Origin story",
+      "blurb": "How we got here: Dec 2022 \u2192 Feb 2025.",
+      "path": "whitepaper/02-origin-story.md",
+      "word_count": 857,
+      "open_questions": 0
+    },
+    {
+      "slug": "03-architecture",
+      "kind": "chapter",
+      "workstream": "protocol",
+      "status": "drafted",
+      "title": "Architecture",
+      "blurb": "Three-layer stack: L1 + rollups + data sidechains.",
+      "path": "whitepaper/03-architecture.md",
+      "word_count": 512,
+      "open_questions": 0
+    },
+    {
+      "slug": "04-consensus",
+      "kind": "chapter",
+      "workstream": "protocol",
+      "status": "specced",
+      "title": "Consensus",
+      "blurb": "Proof of Publication (PoPub).",
+      "path": "whitepaper/04-consensus.md",
+      "word_count": 632,
+      "open_questions": 0
+    },
+    {
+      "slug": "05-tokenomics",
+      "kind": "chapter",
+      "workstream": "economics",
+      "status": "specced",
+      "title": "Tokenomics",
+      "blurb": "WRF token \u00b7 WRC-20 ecosystem standard.",
+      "path": "whitepaper/05-tokenomics.md",
+      "word_count": 946,
+      "open_questions": 0
+    },
+    {
+      "slug": "06-tech-stack",
+      "kind": "chapter",
+      "workstream": "implementation",
+      "status": "implementing",
+      "title": "Tech stack",
+      "blurb": "Rust workspace \u00b7 ed25519 (SLIP-0010) \u00b7 BIP-39 \u00b7 0x SHA3-256 addresses.",
+      "path": "whitepaper/06-tech-stack.md",
+      "word_count": 487,
+      "open_questions": 0
+    },
+    {
+      "slug": "07-roadmap",
+      "kind": "chapter",
+      "workstream": "release",
+      "status": "drafted",
+      "title": "Roadmap",
+      "blurb": "Four phases \u00b7 testnet target mid-2026.",
+      "path": "whitepaper/07-roadmap.md",
+      "word_count": 681,
+      "open_questions": 0
+    }
+  ],
+  "wiki": {
+    "available": true,
+    "total": 10,
+    "active": 10,
+    "stub": 0,
+    "review_needed": 0,
+    "sources": 15,
+    "open_questions": 23,
+    "path_hint": "wiki"
+  },
+  "repos": [],
+  "testnet": {
+    "health_class": "unreachable",
+    "status_line": "node unreachable \u00b7 last seen never",
+    "block": "\u2014",
+    "peers": "\u2014",
+    "last_block": "\u2014"
+  },
+  "live_strip": {
+    "pr_open": 0,
+    "pr_ready": 0,
+    "commits_7d": 0,
+    "last_lint": "2026-09-20"
+  },
+  "workstream_order": [
+    "framing",
+    "protocol",
+    "economics",
+    "implementation",
+    "governance",
+    "release"
+  ],
+  "status_order": [
+    "drafted",
+    "specced",
+    "implementing",
+    "shipped",
+    "blocked"
+  ]
+}

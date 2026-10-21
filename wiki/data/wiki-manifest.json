@@ -1,0 +1,107 @@
+{
+  "schema": "wrfcoin-wiki-manifest-v1",
+  "generated_at": "2026-10-18T23:47:20+00:00",
+  "wiki_root": "wiki",
+  "entries": [
+    {
+      "slug": "wrf-token",
+      "title": "WRF Economics and WRC-20 Boundary",
+      "wiki_type": "economics",
+      "wiki_status": "active",
+      "wiki_path": "economics/wrf-token.md",
+      "source_count": 1,
+      "open_questions": 2,
+      "last_updated": "2026-09-20"
+    },
+    {
+      "slug": "tech-stack",
+      "title": "Reference Implementation Tech Stack",
+      "wiki_type": "implementation",
+      "wiki_status": "active",
+      "wiki_path": "implementation/tech-stack.md",
+      "source_count": 1,
+      "open_questions": 2,
+      "last_updated": "2026-09-20"
+    },
+    {
+      "slug": "index",
+      "title": "WRFCoin Wiki Index",
+      "wiki_type": "index",
+      "wiki_status": "active",
+      "wiki_path": "index.md",
+      "source_count": 0,
+      "open_questions": 0,
+      "last_updated": "2026-09-20"
+    },
+    {
+      "slug": "origin-story",
+      "title": "Origin Story",
+      "wiki_type": "framing",
+      "wiki_status": "active",
+      "wiki_path": "origin-story.md",
+      "source_count": 1,
+      "open_questions": 5,
+      "last_updated": "2026-05-18"
+    },
+    {
+      "slug": "architecture",
+      "title": "Architecture and Implementation Boundary",
+      "wiki_type": "protocol",
+      "wiki_status": "active",
+      "wiki_path": "protocol/architecture.md",
+      "source_count": 1,
+      "open_questions": 2,
+      "last_updated": "2026-09-20"
+    },
+    {
+      "slug": "proof-of-publication",
+      "title": "Proof of Publication (PoPub)",
+      "wiki_type": "protocol",
+      "wiki_status": "active",
+      "wiki_path": "protocol/proof-of-publication.md",
+      "source_count": 1,
+      "open_questions": 3,
+      "last_updated": "2026-09-20"
+    },
+    {
+      "slug": "testnet-roadmap",
+      "title": "Testnet Roadmap and Reachability",
+      "wiki_type": "release",
+      "wiki_status": "active",
+      "wiki_path": "release/testnet-roadmap.md",
+      "source_count": 1,
+      "open_questions": 2,
+      "last_updated": "2026-09-20"
+    },
+    {
+      "slug": "cross-section-tradeoffs",
+      "title": "Cross-Section Design Tradeoffs",
+      "wiki_type": "synthesis",
+      "wiki_status": "active",
+      "wiki_path": "synthesis/cross-section-tradeoffs.md",
+      "source_count": 3,
+      "open_questions": 2,
+      "last_updated": "2026-09-20"
+    },
+    {
+      "slug": "open-questions-rollup",
+      "title": "Open Questions Rollup",
+      "wiki_type": "synthesis",
+      "wiki_status": "active",
+      "wiki_path": "synthesis/open-questions-rollup.md",
+      "source_count": 5,
+      "open_questions": 0,
+      "last_updated": "2026-09-20"
+    },
+    {
+      "slug": "vision",
+      "title": "Vision",
+      "wiki_type": "framing",
+      "wiki_status": "active",
+      "wiki_path": "vision.md",
+      "source_count": 1,
+      "open_questions": 5,
+      "last_updated": "2026-05-18"
+    }
+  ]
+}
