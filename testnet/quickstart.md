@@ -1,5 +1,7 @@
 # WRFCoin public testnet quickstart
 
+> **Chain 888 publication:** balances restart from the new genesis; previous-chain balances and activation heights do not carry over. The owner must publish the genesis hash and confirm the cut before this guide is used.
+
 For the proposed forecaster workflow and its current limits, read [Forecasting on the testnet](forecasting.md).
 
 WRFCoin is a public blockchain for weather data. Personal weather stations and phones contribute observations, forecasts are published against them, and the chain rewards the contributions it can verify. The public testnet opened on **2026-10-22**.
@@ -39,7 +41,11 @@ Do not uninstall the app, or clear the browser, until the recovery words and the
 
 ## 2. Get test tokens from the faucet
 
-The faucet gives small amounts of testnet WRF so you can try transactions. It is rate-limited: one claim per address per 24 hours, a daily cap per wallet, and a shared daily cap for the whole network. When the network cap is reached, claims pause until the next day. The amount is whatever the faucet displays; it has no monetary value.
+The faucet gives testnet WRF so you can try transactions. Follow the currently displayed amount, cooldown and per-wallet/shared caps; old-chain limits do not establish the new service policy. A pending request is not a confirmed payment. Testnet WRF has no monetary value.
+
+The proposed one-time grant pays **250.36 WRF to the bond owner account**, requested with a claim signed by your node's bond server key. The owner must then submit the bond Deposit; the faucet does not escrow the grant or force the Deposit. It is **OFF until announced**. See the deployed flow for availability and current limits; this guide does not verify deployment or invent a claim endpoint. Recheck against the merged faucet implementation before publication. The ordinary wallet faucet is a separate flow.
+
+During launch week, request the bond grant from the operator by opening a **Node operator help** issue in [wrfcoin/testnet-support](https://github.com/wrfcoin/testnet-support/issues/new/choose); there is no self-serve bond-grant route this week.
 
 - **Website:** on the **Get started** page, scroll to **Fund Your Wallet** (the testnet faucet), answer the verification challenge, and claim. **Tokens Claimed!** confirms that the request was accepted.
 - **Android app (once available):** open **Earnings → Get Testnet Tokens**, check that **Tokens will be sent to** shows your own address, tap **Request Testnet Tokens**, answer the challenge, then **Claim Tokens** once.
@@ -98,11 +104,11 @@ The **Terms**, **Privacy**, **API terms** and **Security** pages, linked from th
 
 ## 6. Running a node
 
-You do **not** need a node to hold a wallet or connect a station. Node operators run a **sync-only full node**: it restores the published chain snapshot, follows the chain from the network's peers, keeps a full copy of the blocks, serves a local API, and can submit transactions. It does not produce blocks; block production on the testnet is done by the team's registered producer nodes, so a sync node cannot fork the network and has no signing keys to protect.
+You do **not** need a node to hold a wallet or connect a station. Node operators run a **sync-only full node**: it syncs from genesis by default (a matching snapshot is optional), follows the chain from the network's peers, keeps a full copy of the blocks, serves a local API, and can submit transactions. It does not produce blocks; block production on the testnet is done by the team's registered producer nodes, so a sync node cannot fork the network and has no signing keys to protect.
 
-What it takes: a computer that stays on (a Linux box, a Mac or an old laptop with about 8 GB of RAM), Docker with Compose v2, and a clone of [wrfcoin/infra](https://github.com/wrfcoin/infra) and [wrfcoin/core4](https://github.com/wrfcoin/core4) side by side. The node image is built from source on your machine; the first build takes 10 to 40 minutes. The join script in `infra/testnet/` writes a local configuration, pins the node to the testnet (chain ID 777), restores the published chain snapshot, and starts the node.
+What it takes: a computer that stays on (a Linux box, a Mac or an old laptop with about 8 GB of RAM), Docker with Compose v2, and a clone of [wrfcoin/infra](https://github.com/wrfcoin/infra) and [wrfcoin/core4](https://github.com/wrfcoin/core4) side by side. The node image is built from source on your machine; the first build takes 10 to 40 minutes. The join script in `infra/testnet/` writes a local configuration, pins the node to chain ID **888**, network **testnet**, and starts a full sync. A snapshot is optional on the fresh chain. Verify the owner-published genesis hash `553a3758386d9631037d7469686acb4a121ced81dcf5cde256e2d05667c5f332` before joining; this placeholder must be replaced, not pasted as a hash. The seed is `/dns4/seed.wrfcoin.com/tcp/9000`. Plan **250.36 WRF** for bond funding and lifecycle fees; the one-time bond grant above is conditional on service availability.
 
-Peering with the testnet's bootstrap node is currently arranged per operator. Open a **Node operator help** issue in [wrfcoin/testnet-support](https://github.com/wrfcoin/testnet-support/issues/new/choose) before you start, and the team will give you the current peer details and snapshot checksum.
+The public bootstrap is `/dns4/seed.wrfcoin.com/tcp/9000`. Verify the published chain 888 pins before joining. For peering trouble or an operator-provided fallback, open a **Node operator help** issue in [wrfcoin/testnet-support](https://github.com/wrfcoin/testnet-support/issues/new/choose). A snapshot is optional; verify its chain, genesis and manifest before use.
 
 ### See what your node is doing
 
