@@ -43,14 +43,48 @@ Do not uninstall the app, or clear the browser, until the recovery words and the
 
 The faucet gives testnet WRF so you can try transactions. Follow the currently displayed amount, cooldown and per-wallet/shared caps; old-chain limits do not establish the new service policy. A pending request is not a confirmed payment. Testnet WRF has no monetary value.
 
-The proposed one-time grant pays **250.36 WRF to the bond owner account**, requested with a claim signed by your node's bond server key. The owner must then submit the bond Deposit; the faucet does not escrow the grant or force the Deposit. It is **OFF until announced**. See the deployed flow for availability and current limits; this guide does not verify deployment or invent a claim endpoint. Recheck against the merged faucet implementation before publication. The ordinary wallet faucet is a separate flow.
-
-During launch week, request the bond grant from the operator by opening a **Node operator help** issue in [wrfcoin/testnet-support](https://github.com/wrfcoin/testnet-support/issues/new/choose); there is no self-serve bond-grant route this week.
-
 - **Website:** on the **Get started** page, scroll to **Fund Your Wallet** (the testnet faucet), answer the verification challenge, and claim. **Tokens Claimed!** confirms that the request was accepted.
 - **Android app (once available):** open **Earnings → Get Testnet Tokens**, check that **Tokens will be sent to** shows your own address, tap **Request Testnet Tokens**, answer the challenge, then **Claim Tokens** once.
 
 Keep the transaction hash the faucet returns in case you need support. If the page says the faucet is not funded, or a claim is pending or in cooldown, wait rather than claiming again.
+
+### Bond grant for node operators
+
+The faucet can pay a one-time **250.36 WRF** grant to the owner wallet of a new node, so you can fund the node's bond. **It is not yet available on the public testnet:** it stays off until the operator enables it and announces it. Until then a request is refused. The wallet faucet above is a separate flow.
+
+Once it is enabled, the self-serve steps are:
+
+1. **Run a synced node for 24 hours.** The faucet checks on its own node that your peer has been connected for at least 24 hours, is in sync and is not banned. A newer node is told to come back later.
+2. **Build and sign the request on that node** with the `wrfcoin` CLI from [wrfcoin/core4](https://github.com/wrfcoin/core4), replacing the address with your own owner wallet:
+
+   ```sh
+   wrfcoin --output json node bond grant-request \
+     --owner-address 0xYOUR40HEXCHARACTEROWNERADDRESS \
+     --api-url http://127.0.0.1:8556 --out grant-request.json
+   ```
+
+   The request is signed twice: by the node's bond server key (the same signer as `wrfcoin node bond sign --role server`, from the HSM or a `--key-file` seed) and by the node's own peer identity key (`$WRFCOIN_DATA_DIR/peer_identity.key` by default, or `--p2p-key-file`). The second signature proves the request comes from that node, not from someone naming it. No private key is printed or written to the file. The full reference is `tools/cli/WrfcoinCLI/docs/bond-grant-request.md` in core4.
+3. **Submit it once, with the faucet's verification question.** Ask for a question, answer it within five minutes, add the answer to your request and send it (with `curl` and `jq`):
+
+   ```sh
+   curl -s -X POST https://wrfcoin.com/api/onboarding/faucet/challenge
+   # The reply holds a challengeId and a question such as "What is 7 + 12?".
+   jq --arg id 'CHALLENGE_ID_FROM_THE_REPLY' --argjson answer 19 \
+     '. + {challengeId: $id, answer: $answer}' grant-request.json > grant-submit.json
+   curl -s -X POST -H 'Content-Type: application/json' \
+     --data @grant-submit.json https://wrfcoin.com/api/faucet/bond-grant
+   ```
+
+   Send it once. If the reply is unclear or the connection drops, check the audit page below before trying again.
+4. **Fund the bond.** The grant pays the owner wallet; it does not deposit the bond for you and does not hold it in escrow. Submit the bond Deposit yourself with `wrfcoin node bond deposit` (see `wrfcoin node bond deposit --help`).
+
+The limits are plain:
+
+- **One grant per node, per peer and per wallet, ever.** A server key, peer id or owner wallet that has received a grant cannot receive another.
+- **Six hours between grants** across the whole network, and **at most two grants per UTC day**. If the faucet is pacing, it says when to try again; do not retry in a loop.
+- A signed request is not an approval. The faucet can still refuse it (node too new, out of sync, paced, already granted, or switched off).
+
+Every grant the faucet pays is listed publicly, newest first, on the [bond-grant audit page](https://wrfcoin.com/faucet/bond-grants): owner wallet, peer id, time, whether the bond was deposited (shown as "not yet available" while the faucet cannot read it) and the grant transaction.
 
 ## 3. Receive and send WRF
 
@@ -106,7 +140,7 @@ The **Terms**, **Privacy**, **API terms** and **Security** pages, linked from th
 
 You do **not** need a node to hold a wallet or connect a station. Node operators run a **sync-only full node**: it syncs from genesis by default (a matching snapshot is optional), follows the chain from the network's peers, keeps a full copy of the blocks, serves a local API, and can submit transactions. It does not produce blocks; block production on the testnet is done by the team's registered producer nodes, so a sync node cannot fork the network and has no signing keys to protect.
 
-What it takes: a computer that stays on (a Linux box, a Mac or an old laptop with about 8 GB of RAM), Docker with Compose v2, and a clone of [wrfcoin/infra](https://github.com/wrfcoin/infra) and [wrfcoin/core4](https://github.com/wrfcoin/core4) side by side. The node image is built from source on your machine; the first build takes 10 to 40 minutes. The join script in `infra/testnet/` writes a local configuration, pins the node to chain ID **888**, network **testnet**, and starts a full sync. A snapshot is optional on the fresh chain. Verify the owner-published genesis hash `553a3758386d9631037d7469686acb4a121ced81dcf5cde256e2d05667c5f332` before joining; this placeholder must be replaced, not pasted as a hash. The seed is `/dns4/seed.wrfcoin.com/tcp/9000`. Plan **250.36 WRF** for bond funding and lifecycle fees; the one-time bond grant above is conditional on service availability.
+What it takes: a computer that stays on (a Linux box, a Mac or an old laptop with about 8 GB of RAM), Docker with Compose v2, and a clone of [wrfcoin/infra](https://github.com/wrfcoin/infra) and [wrfcoin/core4](https://github.com/wrfcoin/core4) side by side. The node image is built from source on your machine; the first build takes 10 to 40 minutes. The join script in `infra/testnet/` writes a local configuration, pins the node to chain ID **888**, network **testnet**, and starts a full sync. A snapshot is optional on the fresh chain. Verify the owner-published genesis hash `553a3758386d9631037d7469686acb4a121ced81dcf5cde256e2d05667c5f332` before joining; this placeholder must be replaced, not pasted as a hash. The seed is `/dns4/seed.wrfcoin.com/tcp/9000`. Plan **250.36 WRF** for bond funding and lifecycle fees; the one-time bond grant in section 2 can cover it once the faucet enables it.
 
 The public bootstrap is `/dns4/seed.wrfcoin.com/tcp/9000`. Verify the published chain 888 pins before joining. For peering trouble or an operator-provided fallback, open a **Node operator help** issue in [wrfcoin/testnet-support](https://github.com/wrfcoin/testnet-support/issues/new/choose). A snapshot is optional; verify its chain, genesis and manifest before use.
 
