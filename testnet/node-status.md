@@ -1,12 +1,12 @@
 # Node status: what each panel means
 
-The local status page at `http://localhost:8556/dashboard` is **in progress for
-launch week**.
-This guide explains the planned panels; it does not establish that the dashboard
-is included in your installed node. Open it on the computer running your node:
-`localhost` refers to the computer where your browser is running.
+Your node serves its own dashboard at `http://127.0.0.1:8556/dashboard`. It is
+in core4 main and in the Windows node preview 3 installer (v0.3.0), which opens
+it from the Start menu. A Docker node serves it once its locally built image
+includes it. Open it on the computer running your node: `127.0.0.1` refers to
+the computer where your browser is running.
 
-Until the dashboard is available, inspect the local chain summary:
+From a terminal you can also read the local chain summary:
 
 ```bash
 curl -s localhost:8556/network/info | jq
@@ -33,10 +33,10 @@ conclusion. A chain identity mismatch needs operator help before continuing.
 
 ## Host panel — operator token required
 
-The planned host panel requires the node's **operator token**. The backing
+The host panel requires the node's **operator token**. The backing
 `GET /node/metrics/host` endpoint protects host telemetry. Without authorization,
 expect a **token required** state rather than CPU, memory, swap or disk values.
-Public chain and node panels do not need this token under the dashboard spec.
+Public chain and node panels do not need this token.
 
 | Value | What it means |
 | --- | --- |
@@ -55,9 +55,10 @@ summary to copy; token provisioning and a safe handoff remain an operator setup
 dependency. Ask the operator who configured your node for the approved private
 handoff. Do not use a wallet key or recovery phrase as a substitute.
 
-Once the dashboard is available, use its dedicated token field. The spec keeps
-the token in the tab's session storage and sends it in an authorization header,
-never in the URL. Do not put tokens in bookmarks, commands, logs, screenshots,
+On Windows, the Start-menu entry hands the token to the page in the address-bar
+fragment (after `#`), which browsers never send to the server; the page moves it
+to the tab's session storage and clears the address bar. Otherwise, paste it into
+the dashboard's token field. The page sends it only in an authorization header. Do not put tokens in bookmarks, commands, logs, screenshots,
 public issues or shared screen recordings. Do not expose the local API publicly
 to make the page accessible from another computer.
 
@@ -70,7 +71,7 @@ to make the page accessible from another computer.
 - **Uptime:** how long the current node process has been running, not the age of
   the chain or proof of uninterrupted synchronization.
 - **Data as of:** when the displayed data was last refreshed successfully.
-  The planned refresh interval is ten seconds. An old timestamp means the
+  The page refreshes every ten seconds. An old timestamp means the
   screen may be stale; it does not prove the node has stopped.
 
 ## Metrics and help
@@ -82,6 +83,6 @@ are separate ways to inspect the node.
 For a problem, use [testnet support](https://github.com/wrfcoin/testnet-support/issues/new/choose).
 Share your OS/platform, software version, the relevant join-summary lines and
 local chain-summary output **after checking and redacting private details**.
-Once the page exists, a cropped screenshot can help, but omit the token field,
+A cropped dashboard screenshot can help, but omit the token field,
 private host details and personal paths. Never post configuration or environment
 files. Report suspected vulnerabilities privately to **security@wrfcoin.com**.
