@@ -1,8 +1,8 @@
 # WRFCoin public testnet quickstart
 
-> **Chain 888 publication:** balances restart from the new genesis; previous-chain balances and activation heights do not carry over. The owner must publish the genesis hash and confirm the cut before this guide is used.
+> **Chain 888:** balances restarted from the new genesis; previous-chain balances and activation heights do not carry over. The genesis hash, published at launch on 2026-10-22, is `553a3758386d9631037d7469686acb4a121ced81dcf5cde256e2d05667c5f332`.
 
-For the proposed forecaster workflow and its current limits, read [Forecasting on the testnet](forecasting.md).
+For the forecaster workflow and its current limits, read [Forecasting on the testnet](forecasting.md).
 
 WRFCoin is a public blockchain for weather data. Personal weather stations and phones contribute observations, forecasts are published against them, and the chain rewards the contributions it can verify. The public testnet opened on **2026-10-22**.
 
@@ -106,7 +106,7 @@ The **Terms**, **Privacy**, **API terms** and **Security** pages, linked from th
 
 You do **not** need a node to hold a wallet or connect a station. Node operators run a **sync-only full node**: it syncs from genesis by default (a matching snapshot is optional), follows the chain from the network's peers, keeps a full copy of the blocks, serves a local API, and can submit transactions. It does not produce blocks; block production on the testnet is done by the team's registered producer nodes, so a sync node cannot fork the network and has no signing keys to protect.
 
-What it takes: a computer that stays on (a Linux box, a Mac or an old laptop with about 8 GB of RAM), Docker with Compose v2, and a clone of [wrfcoin/infra](https://github.com/wrfcoin/infra) and [wrfcoin/core4](https://github.com/wrfcoin/core4) side by side. The node image is built from source on your machine; the first build takes 10 to 40 minutes. The join script in `infra/testnet/` writes a local configuration, pins the node to chain ID **888**, network **testnet**, and starts a full sync. A snapshot is optional on the fresh chain. Verify the owner-published genesis hash `553a3758386d9631037d7469686acb4a121ced81dcf5cde256e2d05667c5f332` before joining; this placeholder must be replaced, not pasted as a hash. The seed is `/dns4/seed.wrfcoin.com/tcp/9000`. Plan **250.36 WRF** for bond funding and lifecycle fees; the one-time bond grant above is conditional on service availability.
+What it takes: a computer that stays on (a Linux box, a Mac or an old laptop with about 8 GB of RAM), Docker with Compose v2, and a clone of [wrfcoin/infra](https://github.com/wrfcoin/infra) and [wrfcoin/core4](https://github.com/wrfcoin/core4) side by side. The node image is built from source on your machine; the first build takes 10 to 40 minutes. The join script in `infra/testnet/` writes a local configuration, pins the node to chain ID **888**, network **testnet**, and starts a full sync. A snapshot is optional on the fresh chain. Check that your node reports the published genesis hash `553a3758386d9631037d7469686acb4a121ced81dcf5cde256e2d05667c5f332` (with a `0x` prefix) before relying on it. The seed is `/dns4/seed.wrfcoin.com/tcp/9000`. Plan **250.36 WRF** for bond funding and lifecycle fees; the one-time bond grant above is conditional on service availability.
 
 The public bootstrap is `/dns4/seed.wrfcoin.com/tcp/9000`. Verify the published chain 888 pins before joining. For peering trouble or an operator-provided fallback, open a **Node operator help** issue in [wrfcoin/testnet-support](https://github.com/wrfcoin/testnet-support/issues/new/choose). A snapshot is optional; verify its chain, genesis and manifest before use.
 

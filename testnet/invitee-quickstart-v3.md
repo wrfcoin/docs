@@ -1,6 +1,6 @@
 # WRFCoin closed-testnet invitee quickstart (v3)
 
-> **Superseded for chain 888:** use the [public testnet quickstart](quickstart.md). Network: `testnet`; genesis: `553a3758386d9631037d7469686acb4a121ced81dcf5cde256e2d05667c5f332` (owner publication required). The historical release receipts below do not verify this genesis, balances, faucet policy or station activation.
+> **Superseded for chain 888:** use the [public testnet quickstart](quickstart.md). Network: `testnet`; genesis: `553a3758386d9631037d7469686acb4a121ced81dcf5cde256e2d05667c5f332` (published at launch, 2026-10-22). The historical release receipts below do not verify this genesis, balances, faucet policy or station activation.
 
 > **Public launch (2026-10-22):** this closed-testnet guide is kept for history. New participants should use the [public testnet quickstart](quickstart.md).
 
