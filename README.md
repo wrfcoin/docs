@@ -25,6 +25,7 @@ Public launch: **2026-10-22**. This is a test network. It may be reset without n
 | Understand the protocol's goals | [Whitepaper](whitepaper/01-vision.md); vision is not a shipping commitment. |
 | Find background and open questions | [Wiki](wiki/index.md). |
 | Run a sync node | [Operator guide](testnet/operator-guide.md), pointing to the canonical join instructions. |
+| Read WRFCoin data in the Wolfram Language | [WRFCoinData for the Wolfram Function Repository](integrations/wolfram/README.md). |
 | Browse the generated documentation | [Library](site/library.html) and [wiki browser](site/wiki.html). |
 
 ## Today and planned
