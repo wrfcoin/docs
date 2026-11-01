@@ -32,7 +32,7 @@ Public launch: **2026-10-22**. This is a test network. It may be reset without n
 
 **Today:** quickstart, software/platform guidance, node-status explanations, the implementation matrix and protocol background are available in this repository. New wallets use ed25519; legacy secp256k1 addresses are receive-only. Documentation and source availability do not establish live service readiness.
 
-**Planned or experimental:** the whitepaper's L2 rollups, DAG sidechain and marketplaces are not current testnet products. Signed software downloads are not yet published. Use each guide's availability notes and the status matrix instead of treating architecture chapters as a feature list.
+**Planned or experimental:** the whitepaper's L2 rollups, DAG sidechain and marketplaces are not current testnet products. Signed software downloads are not yet published; the Windows node installer is an unsigned preview. Use each guide's availability notes and the status matrix instead of treating architecture chapters as a feature list.
 
 The public code/documentation snapshots begin with a filtered source commit; their earlier development history stays private. Publishing repositories and deploying their contents are separate steps.
 
@@ -41,11 +41,11 @@ The public code/documentation snapshots begin with a filtered source commit; the
 ```text
 whitepaper/       Protocol vision and chapter narrative.
 wiki/             Source markdown for the maintained WRFCoin wiki.
-testnet/          Operator guide and testnet integration notes.
-development/      Design and contributor-facing reference notes.
+testnet/          Quickstart, downloads, node guides and testnet facts.
+launch/           Launch announcement.
+org-profile/      Source of the GitHub organization profile.
 site/             Generated HTML surfaces.
 data/             Curated generated manifests.
-cache/            Cached repo/testnet state used by generators.
 scripts/          Library/testnet/repo-state generators.
 ```
 

@@ -123,11 +123,16 @@ Compare the reported chain identity with your current join instructions. Watch
 height and sync state over successive readings; a positive peer count alone
 does not establish that the node has caught up.
 
-For launch week, a browser status page is in progress at
-`http://localhost:8556/dashboard`.
-It may not exist in your installed build yet. Read
-[what each status panel means](node-status.md), including which host values need
-an operator token and the current token-handoff limitation.
+Your node also serves a browser dashboard at
+`http://127.0.0.1:8556/dashboard`, on the same computer. It is in core4 main and
+in the Windows preview installer; a Docker node serves it once its locally built
+image includes it. Read [what each panel means](node-status.md), including which
+host values need an operator token.
+
+On **Windows**, use the native
+[preview installer](downloads.md#windows-node--preview-installer) instead of
+Docker: no WSL, no Docker and no administrator rights. It is an unsigned testnet
+preview, so SmartScreen warns before it runs; check the SHA-256 first.
 
 For Prometheus, the node exposes `GET /metrics` on its local API, subject to its
 configured access controls. Keep that API local; do not expose it publicly to
