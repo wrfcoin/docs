@@ -4,6 +4,18 @@
 
 Testnet tokens have no monetary value, and the network may reset. Read the [quickstart](quickstart.md) and [launch facts](facts.md) before preparing a submission.
 
+## In the browser: practice forecast
+
+You don't need the kit for a practice forecast. Open
+[wrfcoin.com/forecast/new](https://wrfcoin.com/forecast/new). When forecasts are
+open, sign in with a 12-word wallet, choose a station, a variable and a lead
+time, check the suggested value (change it if you expect something else) and
+submit. One forecast counts per station, lead time and UTC day. Passkey wallets
+can't sign a forecast yet. The score is a practice score: nothing is paid for
+it. If the page says forecasts are not open or unavailable, try again later.
+
+The kit below is a separate workflow for running your own model.
+
 ## Installation
 
 You need Python 3.10 or newer (standard library only), a Rust toolchain to build the `wrfcoin` CLI, and git. The optional learned model also needs NumPy and ONNX Runtime.

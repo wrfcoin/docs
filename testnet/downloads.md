@@ -15,13 +15,14 @@ and private.
 
 ## Windows node — preview installer
 
-**Windows node preview 3 (v0.3.0)** is a native installer for 64-bit Windows 10
-and 11: one file, no WSL, no Docker and no administrator rights. It runs a
-sync-only node on the chain 888 testnet and opens the node's own dashboard at
-`http://127.0.0.1:8556/dashboard`. Download the setup `.exe` and `SHA256SUMS`
-from the [core4 release](https://github.com/wrfcoin/core4/releases/tag/v888-windows-preview-3)
-or the [downloads page](https://wrfcoin.com/downloads), check the hash (see
-[Verify what you download](#verify-what-you-download)), then run it.
+The Windows node preview is a native installer for 64-bit Windows 10 and 11:
+one file, no WSL, no Docker and no administrator rights. It runs a sync-only
+node on the chain 888 testnet and opens the node's own dashboard at
+`http://127.0.0.1:8556/dashboard`. Get the current preview from
+[wrfcoin.com/downloads](https://wrfcoin.com/downloads), which shows its version
+and SHA-256. Check the hash (see [Verify what you download](#verify-what-you-download)),
+then run it. If the page says the installer is unavailable, wait; don't
+substitute an older preview.
 
 It is a testnet preview and the installer is **not code-signed**, so Windows
 SmartScreen warns before it runs. If the hash matched, choose **More info**, then
@@ -69,17 +70,16 @@ a terminal you can also read the chain summary:
 curl http://127.0.0.1:8556/network/info
 ```
 
-## Android APK — coming soon
+## Android APK
 
-The public launch APK is not published yet. Use the web wallet until a signed
-build and its SHA-256 checksum appear on
-[wrfcoin/mobile GitHub Releases](https://github.com/wrfcoin/mobile/releases).
-See the [release preparation guide](https://github.com/wrfcoin/mobile/blob/main/docs/RELEASING.md). A successful unsigned compile is not a public release.
+Download the Android app from [wrfcoin.com/downloads](https://wrfcoin.com/downloads).
+The page shows the APK's version, size, SHA-256 and the certificate it is signed
+with. Check the hash before installing (see
+[Verify what you download](#verify-what-you-download)). If the page says the APK
+is unavailable, use the web wallet; don't install an older build from elsewhere.
 
 The app provides the wallet and phone-as-a-station flow described in the
-[quickstart](quickstart.md#in-the-android-app-coming-soon). Device and public API
-acceptance are still release prerequisites. No APK filename, size, checksum or
-download button is advertised here before the signed release exists.
+[quickstart](quickstart.md#in-the-android-app).
 
 ## Command-line wallet — source only
 
