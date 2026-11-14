@@ -1,7 +1,7 @@
 # Node status: what each panel means
 
 Your node serves its own dashboard at `http://127.0.0.1:8556/dashboard`. It is
-in core4 main and in the Windows node preview 3 installer (v0.3.0), which opens
+in core4 main and in the Windows node preview installer, which opens
 it from the Start menu. A Docker node serves it once its locally built image
 includes it. Open it on the computer running your node: `127.0.0.1` refers to
 the computer where your browser is running.

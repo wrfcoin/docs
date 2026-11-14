@@ -8,7 +8,7 @@ WRFCoin is a public blockchain for weather data. Personal weather stations and p
 
 > **This is a test network.** It may be reset without notice. Balances and tokens have no monetary value. No migration to a mainnet is promised or implied. The network is deliberately attacked on a schedule as part of testing, so use only disposable test assets. Nobody on the team will ever ask for your recovery words or your station's API keys.
 
-This guide covers the website at **<https://wrfcoin.com>** and the Android app. **Android app status:** the launch build is not published yet. Until it appears on the [wrfcoin/mobile Releases page](https://github.com/wrfcoin/mobile/releases), use the website; the app sections below describe what the app does once it is available.
+This guide covers the website at **<https://wrfcoin.com>** and the Android app. Get the Android app from [wrfcoin.com/downloads](https://wrfcoin.com/downloads).
 
 For software availability, platform status and checksum instructions, see
 [Get the software](downloads.md).
@@ -17,7 +17,7 @@ For software availability, platform status and checksum instructions, see
 
 ## 1. Get a wallet
 
-You need one wallet. Create it on the website (or, once the app is available, in the Android app), then keep using the same wallet everywhere. A wallet is a 12-word recovery phrase; the words are the wallet. Write them down, in order, somewhere offline and private. Anyone who has them can spend from the wallet, and nobody can restore a wallet for you without them.
+You need one wallet. Create it on the website or in the Android app, then keep using the same wallet everywhere. A wallet is a 12-word recovery phrase; the words are the wallet. Write them down, in order, somewhere offline and private. Anyone who has them can spend from the wallet, and nobody can restore a wallet for you without them.
 
 ### On the website
 
@@ -29,9 +29,9 @@ You need one wallet. Create it on the website (or, once the app is available, in
 
 Clearing the browser's site data removes the browser copy. That is fine as long as you have your words: import them again.
 
-### In the Android app (coming soon)
+### In the Android app
 
-The app turns a phone with a barometer into a weather station as well as holding a wallet. When the launch build is published on the [wrfcoin/mobile Releases page](https://github.com/wrfcoin/mobile/releases), install it from there and compare the file's SHA-256 checksum with the one published next to it before installing. Install only builds published there or linked from <https://wrfcoin.com>.
+The app turns a phone with a barometer into a weather station as well as holding a wallet. Download the APK from [wrfcoin.com/downloads](https://wrfcoin.com/downloads) and check its SHA-256 checksum against the one shown on that page before installing (see [Get the software](downloads.md#verify-what-you-download)). Install only builds linked from <https://wrfcoin.com>.
 
 1. Open **Earnings → Create Wallet → Generate Wallet**. Write down the 12 recovery words in order, tap **I've written it down**, complete the word checks, then **Complete Setup**.
 2. If you already have a wallet, choose **Import / Restore Wallet** and check that the restored address matches the one you saved.
@@ -78,7 +78,7 @@ Saved readings expire, so keep the phone connected and let it sync. If the app r
 
 1. Open **Connect a station** from the website menu, with your wallet unlocked.
 2. Choose the **Ambient Weather** provider and enter your **Ambient API Key** and **Ambient Application Key** in that form only. Never paste them into an issue, a chat or an email. The page reports **Your keys are valid.** when they verify.
-3. Pick the device from your Ambient account, give the station a public name with no personal details, and choose **Confirm & register**. Keep the station ID.
+3. If your Ambient account has more than one station, the page lists each one with its name and MAC address: pick the one to connect. Check the device name and MAC on the next step, give the station a public name with no personal details, and choose **Confirm & register**. Keep the station ID. A station listed without a MAC cannot be connected, and one already registered by another wallet is refused.
 4. The station page then shows reward progress: observations received, attested, and rewarded.
 
 Station readings, quality and earnings are public. Anyone can see a registered station on the **Weather map** and **Explore** pages, identified by its public alias (`st_` plus 12 hex characters) with its coordinates rounded to 0.1 degrees. Choose a neutral station name.
@@ -97,8 +97,9 @@ Everything on these pages is readable without a wallet:
 - **Explore** and **Block explorer:** stations, the latest blocks and network activity.
 - **Search:** find a block, transaction, address or station.
 - **Leaderboard:** top contributors and what they have earned on chain.
-- **Governance:** proposals and the treasury, read-only.
+- **Governance:** testnet proposals. Advisory voting is available once it is switched on for the network: a wallet can then propose a short text and vote for or against. Each wallet that held at least 1 WRF when a proposal was made gets one vote, so results count wallets, not people. A passed advisory proposal is recorded only; nothing it says is carried out, and parameter proposals stay off.
 - **Forecast:** current conditions and a 7-day forecast for a place.
+- **Make a forecast:** a practice forecast in the browser, at [wrfcoin.com/forecast/new](https://wrfcoin.com/forecast/new). See [Forecasting on the testnet](forecasting.md#in-the-browser-practice-forecast).
 
 The **Terms**, **Privacy**, **API terms** and **Security** pages, linked from the bottom of the home page, are the rules of the testnet. Read them before you depend on anything here.
 
